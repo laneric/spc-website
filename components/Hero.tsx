@@ -11,7 +11,7 @@ export function Hero() {
           {/* Club-wide professional photo */}
           <div className="mb-12 w-full aspect-video relative overflow-hidden rounded-lg">
             <Image
-              src="/photos/FULL_CLUB_PHOTO.jpg"
+              src="/photos/FULL_CLUB_PHOTO.JPG"
               alt="SPC Club Photo"
               fill
               className="object-cover"
