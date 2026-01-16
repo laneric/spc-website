@@ -1,18 +1,50 @@
 @import "tailwindcss";
 
-/* Design tokens */
+/* UC Berkeley Color System */
 :root {
+  /* Primary Colors */
+  --berkeley-blue: #003262;
+  --california-gold: #FDB515;
+  
+  /* Color variants for backgrounds and accents */
+  --berkeley-blue-light: #F0F4F8;
+  --berkeley-blue-dark: #002244;
+  --california-gold-light: #FEF0C7;
+  --california-gold-dark: #E6A000;
+  
+  /* Glassmorphism tokens */
   --spc-glass-bg: rgba(255, 255, 255, 0.7);
-  --spc-glass-border: rgba(24, 24, 27, 0.08);
+  --spc-glass-border: rgba(0, 50, 98, 0.08);
+}
+
+/* Tailwind v4 Theme Configuration */
+@theme {
+  --color-berkeley-blue: #003262;
+  --color-berkeley-blue-light: #F0F4F8;
+  --color-berkeley-blue-dark: #002244;
+  --color-california-gold: #FDB515;
+  --color-california-gold-light: #FEF0C7;
+  --color-california-gold-dark: #E6A000;
 }
 
 /* Typography utility classes */
-.font-instrument {
-  font-family: var(--font-instrument-serif), ui-serif, Georgia, serif;
-}
-
 .font-helvetica {
   font-family: "Helvetica Neue", Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Tighter letter spacing for titles */
+.tracking-tighter-title {
+  letter-spacing: -0.04em;
+}
+
+/* Grayscale filter for company logos */
+.grayscale-logo {
+  filter: grayscale(100%);
+  transition: filter 0.2s ease;
+}
+
+.grayscale-logo:hover {
+  filter: grayscale(0%);
 }
 
 /* Layout utility: keeps inline content margins consistent */
@@ -36,7 +68,17 @@
 
 /* Base body colors */
 body {
-  @apply bg-white text-zinc-900;
+  @apply bg-white text-black;
 }
 
 /* Intentionally minimal: prefer inline Tailwind utilities in components */
+
+/* Hide Notion page header (works for both react-notion and react-notion-x) */
+.notion-header,
+.notion-page-header,
+.notion-page-icon,
+.notion-page-cover,
+.notion-page-header-block,
+.notion-page-title {
+  display: none !important;
+}

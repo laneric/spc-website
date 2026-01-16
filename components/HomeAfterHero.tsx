@@ -1,75 +1,123 @@
+"use client";
 import Link from "next/link";
+import Image from "next/image";
+import { ImageCarousel } from "@/components/ImageCarousel";
+
+const LOGO_DEV_PUBLIC_KEY = 'pk_CVnF_-TmQ9y4_mmec2mHMw';
+
+const studentsImages = [
+  'https://spcberkeley.org/assets/img/confetti.jpg',
+  'https://spcberkeley.org/assets/img/spc-exec.jpg',
+  'https://spcberkeley.org/assets/img/formal-group.jpg',
+  'https://spcberkeley.org/assets/img/spc-group.jpg',
+  'https://spcberkeley.org/assets/img/newbie.jpg'
+];
+
+const companiesImages = [
+  'https://spcberkeley.org/assets/img/ibm.jpg',
+  'https://spcberkeley.org/assets/img/microsoft.jpg',
+  'https://spcberkeley.org/assets/img/netflix.jpg',
+  'https://spcberkeley.org/assets/img/nvidia.jpg'
+];
+
+// Helper function to get logo URL for a company
+function getCompanyLogoUrl(companyName: string): string {
+  const domainMap: Record<string, string> = {
+    "Oracle": "oracle.com",
+    "Zocdoc": "zocdoc.com",
+    "ZocDoc": "zocdoc.com",
+    "Adobe": "adobe.com",
+    "Dropbox": "dropbox.com",
+  };
+  
+  const domain = domainMap[companyName];
+  if (domain) {
+    return `https://img.logo.dev/${domain}?token=${LOGO_DEV_PUBLIC_KEY}`;
+  }
+  
+  // Fallback to local file path
+  return `/logos/companies/${companyName.toLowerCase().replace(/\s+/g, "-")}.png`;
+}
 
 export function HomeAfterHero() {
   return (
     <>
-      {/* Bold Intro */}
+      {/* For Students Section - Split Layout */}
       <section className="container-inline section-y">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          <div className="">
-            <h2 className="font-instrument text-4xl sm:text-6xl leading-tight">Build products.<br />Grow leaders.</h2>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div>
+            <div className="font-helvetica text-xs sm:text-sm tracking-wider text-[#003262] mb-4">
+              For Students
+            </div>
+            <h2 className="font-helvetica text-4xl sm:text-5xl md:text-6xl leading-[1.1] tracking-tighter-title mb-6">
+              From Learning<br />to Launching
+            </h2>
+            <p className="font-helvetica text-zinc-700 text-lg leading-relaxed mb-6">
+              At SPC, we take pride in our firm commitment to product management education. We offer the Junior Consultant Track and Consultant Track for our members who come with various levels of experience.
+            </p>
+            <Link href="/join-us" className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm bg-[#003262] text-white hover:bg-[#002244] transition-colors">
+              Learn More
+            </Link>
           </div>
-          <div className="text-right">
-            <p className="font-helvetica text-lg text-zinc-700 leading-relaxed">
-              We are SPC — Software Product @ Cal. We nurture a rigorous, ambitious community of builders
-              where students learn product thinking by shipping real software with real stakeholders.
-            </p>
-            <p className="font-helvetica text-zinc-600 mt-4">
-              Education. Experience. Community.<br />Three pillars, one outcome: PMs who make an impact.
-            </p>
+          <div className="relative aspect-video md:aspect-square overflow-hidden rounded-lg">
+            <ImageCarousel images={studentsImages} alt="SPC Students" />
           </div>
         </div>
       </section>
 
-      {/* Metrics Grid 2x2 */}
-      <section className="w-full my-30">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2">
-          {/* Card 1 */}
-          <div className="relative overflow-hidden p-6 sm:p-8 min-h-[260px] flex flex-col justify-between bg-[rgb(68,44,32)] text-white">
-            <div className="font-helvetica text-sm tracking-tight opacity-80">Workshops Hosted</div>
-            <div className="flex items-end justify-between">
-              <div className="font-instrument text-5xl sm:text-6xl">40+</div>
-              {/* simple concentric motif */}
-              <div className="relative w-36 h-36">
-                <div className="absolute inset-0 bg-[rgb(245,163,152)]" style={{ borderRadius: '50%' }} />
-                <div className="absolute inset-4 bg-[rgb(5,72,114)]" style={{ borderRadius: '50%' }} />
-                <div className="absolute inset-8 bg-[rgb(245,163,152)]" style={{ borderRadius: '50%' }} />
-              </div>
+      {/* For Companies Section - Split Layout (Reversed) */}
+      <section className="container-inline section-y bg-[#F0F4F8]">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="relative aspect-video md:aspect-square overflow-hidden rounded-lg order-2 md:order-1">
+            <ImageCarousel images={companiesImages} alt="SPC Companies" />
+          </div>
+          <div className="order-1 md:order-2">
+            <div className="font-helvetica text-xs sm:text-sm tracking-wider text-[#003262] mb-4">
+              For Companies
+            </div>
+            <h2 className="font-helvetica text-4xl sm:text-5xl md:text-6xl leading-[1.1] tracking-tighter-title mb-6">
+              Partner with<br />Berkeley's Top Product Talent
+            </h2>
+            <p className="font-helvetica text-zinc-700 text-lg leading-relaxed mb-6">
+              Partner with SPC for client projects, sponsorship opportunities, or recruitment events. Access high-achieving UC Berkeley consultants with our 100% satisfaction guarantee.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-4">
+              <a 
+                href="/sponsorship.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm bg-[#003262] text-white hover:bg-[#002244] transition-colors"
+              >
+                Download Sponsorship Package
+              </a>
+            </div>
+            <div className="font-helvetica text-sm text-zinc-700">
+              <strong>Contact us:</strong>{" "}
+              <a href="mailto:ispma.berkeley@gmail.com" className="text-[#003262] hover:underline">
+                ispma.berkeley@gmail.com
+              </a>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Card 2 */}
-          <div className="relative overflow-hidden p-6 sm:p-8 min-h-[260px] flex flex-col justify-between bg-yellow-400">
-            <div className="font-helvetica text-sm tracking-tight text-black/80">Client Projects</div>
-            <div className="flex items-end justify-between">
-              <div className="font-instrument text-5xl sm:text-6xl">20+</div>
-              {/* geometric motif */}
-              <div className="w-40 h-28 relative">
-                <div className="absolute inset-0 m-auto w-40 h-28 bg-teal-700 clip-path-trapezoid" />
-              </div>
+      {/* Our Impact Section */}
+      <section className="container-inline section-y">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-helvetica text-4xl sm:text-6xl mb-6 tracking-tighter-title text-center">
+            Our Impact
+          </h2>
+          <p className="font-helvetica text-zinc-700 text-lg leading-relaxed max-w-3xl mx-auto text-center mb-12">
+            With mentorship from industry leaders and a track record of success, SPC empowers students to thrive in product management and launch careers at top companies like Amazon, Uber, and IBM.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div className="bg-[#F0F4F8] rounded-lg p-8 text-center">
+              <div className="font-helvetica text-5xl sm:text-6xl mb-3 text-[#003262]">1st</div>
+              <div className="font-helvetica text-sm sm:text-base text-zinc-700">University Chapter Worldwide</div>
             </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="relative overflow-hidden p-6 sm:p-8 min-h-[260px] flex flex-col justify-between bg-[rgb(203,190,160)]">
-            <div className="font-helvetica text-sm tracking-tight text-black/70">Members</div>
-            <div className="flex items-end justify-between">
-              <div className="font-instrument text-5xl sm:text-6xl">60+</div>
-              <div className="h-24 w-40 bg-linear-to-r from-orange-500 via-rose-400 to-blue-700 opacity-70" />
-            </div>
-          </div>
-
-          {/* Card 4 */}
-          <div className="relative overflow-hidden p-6 sm:p-8 min-h-[260px] flex flex-col justify-between bg-orange-500 text-black">
-            <div className="font-helvetica text-sm tracking-tight opacity-80">Diversity-led Initiatives</div>
-            <div className="flex items-end justify-between">
-              <div className="font-instrument text-5xl sm:text-6xl">30</div>
-              {/* stacked semi-circles motif */}
-              <div className="relative w-36 h-28">
-                <div className="absolute bottom-0 left-0 right-0 mx-auto w-32 h-10 bg-violet-400" style={{ borderTopLeftRadius: '9999px', borderTopRightRadius: '9999px' }} />
-                <div className="absolute bottom-9 left-0 right-0 mx-auto w-32 h-10 bg-violet-400" style={{ borderTopLeftRadius: '9999px', borderTopRightRadius: '9999px' }} />
-                <div className="absolute bottom-18 left-0 right-0 mx-auto w-32 h-10 bg-violet-400" style={{ borderTopLeftRadius: '9999px', borderTopRightRadius: '9999px' }} />
-              </div>
+            <div className="bg-[#F0F4F8] rounded-lg p-8 text-center">
+              <div className="font-helvetica text-5xl sm:text-6xl mb-3 text-[#003262]">30+</div>
+              <div className="font-helvetica text-sm sm:text-base text-zinc-700">Active Members</div>
             </div>
           </div>
         </div>
@@ -80,8 +128,8 @@ export function HomeAfterHero() {
         <div className="max-w-6xl mx-auto grid gap-6 md:gap-8">
           <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-6 md:gap-0">
             <div className="flex flex-col items-start justify-start gap-4">
-              <h3 className="font-instrument text-4xl sm:text-5xl">Our Portfolio</h3>
-              <Link href="/about" className="inline-flex rounded-full items-center gap-2 px-4 py-2 text-sm bg-zinc-900 text-white hover:bg-zinc-800 transition-colors">See work →</Link>
+              <h3 className="font-helvetica text-4xl sm:text-5xl tracking-tighter-title">Our Portfolio</h3>
+              <Link href="/about" className="inline-flex rounded-full items-center gap-2 px-4 py-2 text-sm bg-[#003262] text-white hover:bg-[#002244] transition-colors">See work →</Link>
             </div>
             <div className="flex items-start md:items-center justify-start gap-4">
               <p className="font-helvetica text-zinc-700 max-w-md">
@@ -94,17 +142,20 @@ export function HomeAfterHero() {
           {/* Logo grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              "Buildkite",
-              "Pin Payments",
-              "AirTree",
-              "Private Wealth Systems",
-              "Cal Innovators",
-              "Atlas Labs",
-              "Nova Finance",
-              "Berkeley RDI",
+              "Oracle",
+              "Zocdoc",
+              "Adobe",
+              "Dropbox",
             ].map((label) => (
-              <div key={label} className="bg-white h-28 flex items-center justify-center">
-                <div className="text-zinc-800 font-helvetica text-sm opacity-80">{label}</div>
+              <div key={label} className="h-32 flex items-center justify-center p-4">
+                <Image
+                  src={getCompanyLogoUrl(label)}
+                  alt={label}
+                  width={160}
+                  height={60}
+                  className="object-contain max-h-20 w-full"
+                  unoptimized
+                />
               </div>
             ))}
           </div>

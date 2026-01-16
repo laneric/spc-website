@@ -10,8 +10,12 @@
   },
   "dependencies": {
     "next": "16.0.1",
+    "notion-client": "^7.7.3",
+    "prismjs": "^1.30.0",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "react-notion": "^0.10.0",
+    "react-notion-x": "^7.7.3",
     "react-wrap-balancer": "^1.1.1"
   },
   "devDependencies": {

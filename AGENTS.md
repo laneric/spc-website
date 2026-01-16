@@ -31,19 +31,11 @@ SPC (Software Product @Cal) is the first student chapter of the International So
 
 ### Fonts
 
-* **Instrument Serif** (Google Fonts)
 * **Helvetica Neue** (local fonts in `/public/fonts`)
 
 ```ts
 // app/fonts.ts
-import { Instrument_Serif } from "next/font/google";
 import localFont from "next/font/local";
-
-export const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  variable: "--font-instrument-serif",
-  display: "swap",
-});
 
 export const helveticaNeue = localFont({
   src: [
@@ -60,13 +52,13 @@ Attach in layout:
 
 ```tsx
 // app/layout.tsx
-import { instrumentSerif, helveticaNeue } from "./fonts";
+import { helveticaNeue } from "./fonts";
 import "./globals.css";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${instrumentSerif.variable} ${helveticaNeue.variable} antialiased bg-white text-zinc-900`}>
+      <body className={`${helveticaNeue.variable} antialiased bg-white text-zinc-900`}>
         {children}
       </body>
     </html>
@@ -155,7 +147,7 @@ export default function About() {
     <>
       <Topbar />
       <section className="container-inline pt-24 pb-20 max-w-4xl mx-auto">
-        <h1 className="font-instrument text-4xl sm:text-6xl mb-6">About SPC</h1>
+        <h1 className="font-helvetica text-4xl sm:text-6xl mb-6">About SPC</h1>
         <p className="font-helvetica text-zinc-600 text-lg leading-relaxed">
           Software Product @ Cal is a UC Berkeley club fostering excellence in product thinking, design, and engineering. Our mission is to help students bridge theory and practice by shipping real software products.
         </p>
@@ -175,7 +167,7 @@ export default function Students() {
     <>
       <Topbar />
       <section className="container-inline pt-24 pb-20 max-w-4xl mx-auto">
-        <h1 className="font-instrument text-4xl sm:text-6xl mb-6">For Students</h1>
+        <h1 className="font-helvetica text-4xl sm:text-6xl mb-6">For Students</h1>
         <p className="font-helvetica text-zinc-600 text-lg leading-relaxed">
           We empower Berkeley students with mentorship, product training, and hands-on experience through real-world projects and workshops.
         </p>
@@ -195,7 +187,7 @@ export default function Team() {
     <>
       <Topbar />
       <section className="container-inline pt-24 pb-20 max-w-6xl mx-auto">
-        <h1 className="font-instrument text-4xl sm:text-6xl mb-10">Meet the Team</h1>
+        <h1 className="font-helvetica text-4xl sm:text-6xl mb-10">Meet the Team</h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
           {/* map over team data here */}
         </div>
@@ -215,7 +207,7 @@ export default function Events() {
     <>
       <Topbar />
       <section className="container-inline pt-24 pb-20 max-w-5xl mx-auto">
-        <h1 className="font-instrument text-4xl sm:text-6xl mb-6">Events</h1>
+        <h1 className="font-helvetica text-4xl sm:text-6xl mb-6">Events</h1>
         <p className="font-helvetica text-zinc-600 text-lg leading-relaxed mb-10">
           Join our upcoming workshops, speaker sessions, and hackathons where creativity meets product impact.
         </p>
@@ -232,7 +224,7 @@ export default function Events() {
 
 * Maintain minimal white space with strong typography.
 * Reuse the topbar on all pages.
-* Use `font-instrument` for headings and `font-helvetica` for body.
+* Use `font-helvetica` for all text.
 * Keep each page under one clear concept section.
 * Use consistent vertical rhythm: apply `section-y` (currently `pt-24 pb-20`) to all top-level sections including the home hero and subsequent sections.
 
