@@ -33,13 +33,13 @@ export default function JoinUs() {
   return (
     <>
       <section className="container-inline pt-24 pb-20 max-w-6xl mx-auto">
-        <h1 className="font-helvetica text-4xl sm:text-6xl mb-10 tracking-tighter-title">Join Us</h1>
+        <h1 className="font-helvetica text-4xl sm:text-6xl mb-10 tracking-tighter-title text-[#003262]">Join Us</h1>
 
         <div className="space-y-12">
           {/* Member Tracks Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             <div className="md:col-span-1">
-              <h2 className="font-helvetica text-2xl sm:text-3xl tracking-tighter-title">Member Tracks</h2>
+              <h2 className="font-helvetica text-2xl sm:text-3xl tracking-tighter-title text-[#003262]">Member Tracks</h2>
             </div>
             <div className="md:col-span-2">
               <Accordion items={trackItems} />
@@ -49,7 +49,7 @@ export default function JoinUs() {
           {/* Recruitment Information - Full Width */}
           <div className="space-y-8">
             <div>
-              <h2 className="font-helvetica text-2xl sm:text-3xl mb-6 tracking-tighter-title">Recruitment Timeline</h2>
+              <h2 className="font-helvetica text-2xl sm:text-3xl mb-6 tracking-tighter-title text-[#003262]">Recruitment Timeline</h2>
               <div className="relative font-helvetica">
                 {/* Vertical timeline connector */}
                 <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-[#E0E8F0]"></div>
@@ -134,13 +134,13 @@ export default function JoinUs() {
             </div>
 
             <div>
-              <h2 className="font-helvetica text-2xl sm:text-3xl mb-4 tracking-tighter-title">Application Process</h2>
+              <h2 className="font-helvetica text-2xl sm:text-3xl mb-4 tracking-tighter-title text-[#003262]">Application Process</h2>
               <p className="font-helvetica text-zinc-700 text-lg leading-relaxed">
                 Application details and requirements will be posted here. Stay tuned for updates on how to apply to SPC.
               </p>
             </div>
 
-            <div className="bg-[#F0F4F8] rounded-lg p-8 mt-12">
+            <div className="bg-berkeley-blue-light p-8 mt-12 border-l-4 border-[#003262]">
               <p className="font-helvetica text-zinc-700 text-lg">
                 Interested in joining SPC? We're always looking for passionate students who want to make an impact through product management. More information coming soon.
               </p>

@@ -43,10 +43,10 @@ export function HomeAfterHero() {
   return (
     <>
       {/* For Students Section - Split Layout */}
-      <section className="container-inline section-y">
+      <section className="container-inline section-y bg-berkeley-blue-light">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
-            <div className="font-helvetica text-xs sm:text-sm tracking-wider text-[#003262] mb-4">
+            <div className="font-helvetica text-xs sm:text-sm tracking-wider text-[#003262] mb-4 font-medium">
               For Students
             </div>
             <h2 className="font-helvetica text-4xl sm:text-5xl md:text-6xl leading-[1.1] tracking-tighter-title mb-6">
@@ -55,7 +55,7 @@ export function HomeAfterHero() {
             <p className="font-helvetica text-zinc-700 text-lg leading-relaxed mb-6">
               At SPC, we take pride in our firm commitment to product management education. We offer the Junior Consultant Track and Consultant Track for our members who come with various levels of experience.
             </p>
-            <Link href="/join-us" className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm bg-[#003262] text-white hover:bg-[#002244] transition-colors">
+            <Link href="/join-us" className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm bg-[#003262] text-white hover:bg-[#002244] transition-colors shadow-sm hover:shadow-md">
               Learn More
             </Link>
           </div>
@@ -66,13 +66,13 @@ export function HomeAfterHero() {
       </section>
 
       {/* For Companies Section - Split Layout (Reversed) */}
-      <section className="container-inline section-y bg-[#F0F4F8]">
+      <section className="container-inline section-y bg-california-gold-light">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="relative aspect-video md:aspect-square overflow-hidden rounded-lg order-2 md:order-1">
             <ImageCarousel images={companiesImages} alt="SPC Companies" />
           </div>
           <div className="order-1 md:order-2">
-            <div className="font-helvetica text-xs sm:text-sm tracking-wider text-[#003262] mb-4">
+            <div className="font-helvetica text-xs sm:text-sm tracking-wider text-[#003262] mb-4 font-medium">
               For Companies
             </div>
             <h2 className="font-helvetica text-4xl sm:text-5xl md:text-6xl leading-[1.1] tracking-tighter-title mb-6">
@@ -86,7 +86,7 @@ export function HomeAfterHero() {
                 href="/sponsorship.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm bg-[#003262] text-white hover:bg-[#002244] transition-colors"
+                className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm bg-[#003262] text-white hover:bg-[#002244] transition-colors shadow-sm hover:shadow-md"
               >
                 Download Sponsorship Package
               </a>
@@ -111,12 +111,12 @@ export function HomeAfterHero() {
             With mentorship from industry leaders and a track record of success, SPC empowers students to thrive in product management and launch careers at top companies like Amazon, Uber, and IBM.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <div className="bg-[#F0F4F8] rounded-lg p-8 text-center">
-              <div className="font-helvetica text-5xl sm:text-6xl mb-3 text-[#003262]">1st</div>
+            <div className="bg-white rounded-lg p-8 text-center border-2 border-[#FDB515] shadow-sm">
+              <div className="font-helvetica text-5xl sm:text-6xl mb-3 text-[#FDB515] font-bold">1st</div>
               <div className="font-helvetica text-sm sm:text-base text-zinc-700">University Chapter Worldwide</div>
             </div>
-            <div className="bg-[#F0F4F8] rounded-lg p-8 text-center">
-              <div className="font-helvetica text-5xl sm:text-6xl mb-3 text-[#003262]">30+</div>
+            <div className="bg-white rounded-lg p-8 text-center border-2 border-[#003262] shadow-sm">
+              <div className="font-helvetica text-5xl sm:text-6xl mb-3 text-[#003262] font-bold">30+</div>
               <div className="font-helvetica text-sm sm:text-base text-zinc-700">Active Members</div>
             </div>
           </div>
@@ -129,7 +129,7 @@ export function HomeAfterHero() {
           <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-6 md:gap-0">
             <div className="flex flex-col items-start justify-start gap-4">
               <h3 className="font-helvetica text-4xl sm:text-5xl tracking-tighter-title">Our Portfolio</h3>
-              <Link href="/about" className="inline-flex rounded-full items-center gap-2 px-4 py-2 text-sm bg-[#003262] text-white hover:bg-[#002244] transition-colors">See work →</Link>
+              <Link href="/about" className="inline-flex rounded-full items-center gap-2 px-4 py-2 text-sm bg-[#003262] text-white hover:bg-[#002244] transition-colors shadow-sm hover:shadow-md">See work →</Link>
             </div>
             <div className="flex items-start md:items-center justify-start gap-4">
               <p className="font-helvetica text-zinc-700 max-w-md">

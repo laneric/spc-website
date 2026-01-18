@@ -44,7 +44,7 @@ export default function Services() {
   return (
     <>
       <section className="mx-2 px-2 sm:px-6 md:px-8 pt-24 pb-20 sm:max-w-6xl sm:mx-auto">
-        <h1 className="font-helvetica text-4xl sm:text-6xl mb-10 tracking-tighter-title">Services</h1>
+        <h1 className="font-helvetica text-4xl sm:text-6xl mb-10 tracking-tighter-title text-[#003262]">Services</h1>
 
         {/* Client Testimonials */}
         {/* <div className="mb-16">
@@ -61,7 +61,7 @@ export default function Services() {
 
         {/* Past Projects */}
         <div className="mb-16">
-          <h2 className="font-helvetica text-2xl sm:text-3xl mb-6 tracking-tighter-title">Past Projects</h2>
+          <h2 className="font-helvetica text-2xl sm:text-3xl mb-6 tracking-tighter-title text-[#003262]">Past Projects</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {pastProjects.map((project) => (
               <div key={project.name} className="rounded-lg p-8 flex items-center justify-center h-40">
@@ -80,12 +80,14 @@ export default function Services() {
 
         {/* What We Offer */}
         <div className="mb-16">
-          <h2 className="font-helvetica text-2xl sm:text-3xl mb-6 tracking-tighter-title">What We Offer</h2>
+          <h2 className="font-helvetica text-2xl sm:text-3xl mb-6 tracking-tighter-title text-[#003262]">What We Offer</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            {services.map((service) => (
+            {services.map((service, index) => (
               <div
                 key={service}
-                className="font-helvetica text-zinc-700 text-base py-4 px-4 bg-[#F0F4F8] rounded-md text-center"
+                className={`font-helvetica text-zinc-700 text-base py-4 px-4 rounded-md text-center ${
+                  index % 2 === 0 ? 'bg-berkeley-blue-light' : 'bg-california-gold-light'
+                }`}
               >
                 {service}
               </div>
@@ -95,26 +97,26 @@ export default function Services() {
 
         {/* Project Breakdown */}
         <div className="mb-16">
-          <h2 className="font-helvetica text-2xl sm:text-3xl mb-6 tracking-tighter-title">Project Breakdown</h2>
+          <h2 className="font-helvetica text-2xl sm:text-3xl mb-6 tracking-tighter-title text-[#003262]">Project Breakdown</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <div className="bg-[#F0F4F8] rounded-lg p-6">
-              <h3 className="font-helvetica text-lg font-medium mb-2">Project Leaders</h3>
+            <div className="bg-berkeley-blue-light p-6 border-l-4 border-[#003262]">
+              <h3 className="font-helvetica text-lg font-medium mb-2 text-[#003262]">Project Leaders</h3>
               <p className="font-helvetica text-zinc-700">1-2 Project Leaders</p>
             </div>
-            <div className="bg-[#F0F4F8] rounded-lg p-6">
-              <h3 className="font-helvetica text-lg font-medium mb-2">Consultants</h3>
+            <div className="bg-california-gold-light p-6 border-l-4 border-[#FDB515]">
+              <h3 className="font-helvetica text-lg font-medium mb-2 text-[#003262]">Consultants</h3>
               <p className="font-helvetica text-zinc-700">4-6 consultants</p>
             </div>
-            <div className="bg-[#F0F4F8] rounded-lg p-6">
-              <h3 className="font-helvetica text-lg font-medium mb-2">Senior Advisors</h3>
+            <div className="bg-berkeley-blue-light p-6 border-l-4 border-[#003262]">
+              <h3 className="font-helvetica text-lg font-medium mb-2 text-[#003262]">Senior Advisors</h3>
               <p className="font-helvetica text-zinc-700">2 senior advisors</p>
             </div>
-            <div className="bg-[#F0F4F8] rounded-lg p-6">
-              <h3 className="font-helvetica text-lg font-medium mb-2">Duration</h3>
+            <div className="bg-california-gold-light p-6 border-l-4 border-[#FDB515]">
+              <h3 className="font-helvetica text-lg font-medium mb-2 text-[#003262]">Duration</h3>
               <p className="font-helvetica text-zinc-700">10-12 weeks</p>
             </div>
-            <div className="bg-[#F0F4F8] rounded-lg p-6">
-              <h3 className="font-helvetica text-lg font-medium mb-2">Total Hours</h3>
+            <div className="bg-berkeley-blue-light p-6 border-l-4 border-[#003262]">
+              <h3 className="font-helvetica text-lg font-medium mb-2 text-[#003262]">Total Hours</h3>
               <p className="font-helvetica text-zinc-700">1,000-1,600 hours</p>
             </div>
           </div>

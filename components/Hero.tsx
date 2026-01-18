@@ -24,14 +24,14 @@ export function Hero() {
             <h1 className="font-helvetica text-[40px] sm:text-6xl md:text-7xl leading-[1.05] tracking-tighter-title">
               <Balancer>Software Product @ Cal</Balancer>
             </h1>
-            <div className="font-helvetica text-[#003262] mt-4 text-lg sm:text-xl">
+            <div className="font-helvetica mt-4 text-lg sm:text-xl font-medium">
               Berkeley Chapter of ISPMA
             </div>
             <p className="font-helvetica text-zinc-700 mt-6 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
               <Balancer>SPC (Software Product @Cal) is the first student chapter of the International Software Product Management Association (ISPMA), dedicated to fostering a community passionate about product management and technology. We offer a dynamic Product Management Curriculum, hands-on Client Projects with sponsor companies, and access to the prestigious North American Software Product Management Summit.</Balancer>
             </p>
             <div className="mt-8 flex items-center justify-center gap-3">
-              <Link href="/about" className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm bg-[#003262] text-white hover:bg-[#002244] transition-colors">
+              <Link href="/about" className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm bg-[#003262] text-white hover:bg-[#002244] transition-colors shadow-sm hover:shadow-md">
                 Learn More
               </Link>
             </div>

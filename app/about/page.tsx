@@ -66,16 +66,16 @@ export default function About() {
         <h1 className="font-helvetica text-4xl sm:text-6xl mb-10 tracking-tighter-title">About SPC</h1>
 
         {/* Founding */}
-        <div className="mb-12">
-          <h2 className="font-helvetica text-2xl sm:text-3xl mb-4 tracking-tighter-title">Our Founding</h2>
+        <div className="mb-4 bg-berkeley-blue-light rounded-lg p-8">
+          <h2 className="font-helvetica text-2xl sm:text-3xl mb-4 tracking-tighter-title text-[#003262]">Our Founding</h2>
           <p className="font-helvetica text-zinc-700 text-lg leading-relaxed">
             Software Product @ Cal was founded as UC Berkeley's first student chapter of the International Software Product Management Association (ISPMA). We began with a vision to bridge the gap between academic learning and real-world product management practice.
           </p>
         </div>
 
         {/* Mission */}
-        <div className="mb-12">
-          <h2 className="font-helvetica text-2xl sm:text-3xl mb-4 tracking-tighter-title">Club Mission</h2>
+        <div className="mb-12 bg-california-gold-light rounded-lg p-8">
+          <h2 className="font-helvetica text-2xl sm:text-3xl mb-4 tracking-tighter-title text-[#003262]">Club Mission</h2>
           <p className="font-helvetica text-zinc-700 text-lg leading-relaxed">
             Our mission is to foster excellence in product thinking, design, and engineering. We help students bridge theory and practice by shipping real software products with real stakeholders, creating a rigorous community of builders who make an impact.
           </p>
@@ -90,7 +90,7 @@ export default function About() {
 
         {/* Where we go */}
         <div className="mb-12">
-          <h2 className="font-helvetica text-2xl sm:text-3xl mb-6 tracking-tighter-title">Where We Go</h2>
+          <h2 className="font-helvetica text-2xl sm:text-3xl mb-6 tracking-tighter-title text-[#003262]">Where We Go</h2>
           <p className="font-helvetica text-zinc-700 text-lg leading-relaxed mb-6">
             Our members go on to work at leading companies across technology, consulting, and product:
           </p>
@@ -128,14 +128,14 @@ export default function About() {
         </div>
 
         {/* Social Media */}
-        <div className="mb-12">
-          <h2 className="font-helvetica text-2xl sm:text-3xl mb-6 tracking-tighter-title">Connect With Us</h2>
+        <div className="mb-12 bg-berkeley-blue-light rounded-lg p-8">
+          <h2 className="font-helvetica text-2xl sm:text-3xl mb-6 tracking-tighter-title text-[#003262]">Connect With Us</h2>
           <div className="flex flex-col items-left gap-3">
             <a
               href="https://www.instagram.com/spc.berkeley/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-helvetica text-lg text-zinc-700 hover:text-black transition-colors opacity-80 hover:opacity-100 flex items-center gap-1.5"
+              className="font-helvetica text-lg text-zinc-700 hover:text-[#003262] transition-colors opacity-80 hover:opacity-100 flex items-center gap-1.5"
             >
               Instagram
               <svg
@@ -157,7 +157,7 @@ export default function About() {
               href="https://www.linkedin.com/company/uc-berkeley-spc/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-helvetica text-lg text-zinc-700 hover:text-black transition-colors opacity-80 hover:opacity-100 flex items-center gap-1.5"
+              className="font-helvetica text-lg text-zinc-700 hover:text-[#003262] transition-colors opacity-80 hover:opacity-100 flex items-center gap-1.5"
             >
               LinkedIn
               <svg

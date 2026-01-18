@@ -76,7 +76,7 @@ export function Topbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-black opacity-80 hover:opacity-100 hover:text-berkeley-blue transition-colors"
+                    className="text-black opacity-80 hover:opacity-100 hover:text-[#003262] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -167,7 +167,7 @@ export function Topbar() {
                   <Link
                     href={link.href}
                     onClick={closeMenu}
-                    className="block py-3 text-lg font-helvetica text-black opacity-80 hover:opacity-100 hover:text-berkeley-blue transition-colors border-b border-zinc-100 last:border-b-0"
+                    className="block py-3 text-lg font-helvetica text-black opacity-80 hover:opacity-100 hover:text-[#003262] transition-colors border-b border-zinc-100 last:border-b-0"
                   >
                     {link.label}
                   </Link>

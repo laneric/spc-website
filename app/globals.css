@@ -59,16 +59,51 @@
 
 /* Simple glassmorphism helper for elevated topbar */
 .glass {
-  background-color: var(--spc-glass-bg);
+  background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: saturate(180%) blur(12px);
   -webkit-backdrop-filter: saturate(180%) blur(12px);
-  border: 1px solid var(--spc-glass-border);
-  @apply backdrop-blur-md
+  border: 1px solid rgba(0, 50, 98, 0.1);
+  @apply backdrop-blur-md;
 }
 
 /* Base body colors */
 body {
   @apply bg-white text-black;
+}
+
+/* Link styles with Berkeley Blue */
+a:not([class]) {
+  color: var(--berkeley-blue);
+  transition: color 0.2s ease;
+}
+
+a:not([class]):hover {
+  color: var(--berkeley-blue-dark);
+}
+
+/* Color utility classes */
+.bg-berkeley-blue-light {
+  background-color: var(--berkeley-blue-light);
+}
+
+.bg-california-gold-light {
+  background-color: var(--california-gold-light);
+}
+
+.text-berkeley-blue {
+  color: var(--berkeley-blue);
+}
+
+.text-california-gold {
+  color: var(--california-gold);
+}
+
+.hover\:text-berkeley-blue:hover {
+  color: var(--berkeley-blue);
+}
+
+.hover\:text-california-gold:hover {
+  color: var(--california-gold);
 }
 
 /* Hide scrollbar utility */

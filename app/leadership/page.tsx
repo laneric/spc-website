@@ -2,11 +2,11 @@ export default function Leadership() {
   return (
     <>
       <section className="container-inline pt-24 pb-12 max-w-6xl mx-auto">
-        <h1 className="font-helvetica text-4xl sm:text-6xl mb-6 tracking-tighter-title">Leadership</h1>
+        <h1 className="font-helvetica text-4xl sm:text-6xl mb-6 tracking-tighter-title text-[#003262]">Leadership</h1>
         
-        <div className="">
+        <div className="bg-berkeley-blue-light rounded-lg p-8">
           <p className="font-helvetica text-zinc-700 text-lg leading-relaxed">
-            <strong className="font-medium">Schedule a coffee chat</strong> with our executive board members to learn about their experiences, get advice, or discuss opportunities with SPC. Each profile card below includes detailed information and a Calendly link at the bottom to book a time.
+            <strong className="font-medium text-[#003262]">Schedule a coffee chat</strong> with our executive board members to learn about their experiences, get advice, or discuss opportunities with SPC. Each profile card below includes detailed information and a Calendly link at the bottom to book a time.
           </p>
         </div>
       </section>
