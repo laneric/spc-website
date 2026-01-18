@@ -71,6 +71,15 @@ body {
   @apply bg-white text-black;
 }
 
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 /* Intentionally minimal: prefer inline Tailwind utilities in components */
 
 /* Hide Notion page header (works for both react-notion and react-notion-x) */

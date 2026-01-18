@@ -6,18 +6,18 @@ import { ImageCarousel } from "@/components/ImageCarousel";
 const LOGO_DEV_PUBLIC_KEY = 'pk_CVnF_-TmQ9y4_mmec2mHMw';
 
 const studentsImages = [
-  'https://spcberkeley.org/assets/img/confetti.jpg',
-  'https://spcberkeley.org/assets/img/spc-exec.jpg',
-  'https://spcberkeley.org/assets/img/formal-group.jpg',
-  'https://spcberkeley.org/assets/img/spc-group.jpg',
-  'https://spcberkeley.org/assets/img/newbie.jpg'
+  '/photos/spc-old-photos/confetti.jpg',
+  '/photos/spc-old-photos/spc-exec.jpg',
+  '/photos/spc-old-photos/formal-group.jpg',
+  '/photos/spc-old-photos/spc-group.jpg',
+  '/photos/spc-old-photos/newbie.jpg'
 ];
 
 const companiesImages = [
-  'https://spcberkeley.org/assets/img/ibm.jpg',
-  'https://spcberkeley.org/assets/img/microsoft.jpg',
-  'https://spcberkeley.org/assets/img/netflix.jpg',
-  'https://spcberkeley.org/assets/img/nvidia.jpg'
+  '/photos/spc-old-photos/ibm.jpg',
+  '/photos/spc-old-photos/microsoft.jpg',
+  '/photos/spc-old-photos/netflix.jpg',
+  '/photos/spc-old-photos/nvidia.jpg'
 ];
 
 // Helper function to get logo URL for a company
