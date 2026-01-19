@@ -2,6 +2,7 @@
 
 import { Accordion } from "@/components/Accordion";
 import { useEffect, useState } from "react";
+import { FiExternalLink } from "react-icons/fi";
 
 export default function JoinUs() {
   const [isApplicationOpen, setIsApplicationOpen] = useState(false);
@@ -66,14 +67,15 @@ export default function JoinUs() {
             title={isApplicationOpen ? "Apply to SPC" : "Applications open January 20, 2026"}
           >
             {isApplicationOpen ? (
-              <>
-                Apply
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </>
+              <span className="flex w-full items-center justify-between sm:justify-center">
+                <span>Apply Now</span>
+                <FiExternalLink className="w-4 h-4 sm:ml-2 ml-auto" aria-hidden="true" />
+              </span>
             ) : (
-              "Apply (Opens Jan 20)"
+              <span className="flex w-full items-center justify-between sm:justify-center">
+                <span>Apply Now</span>
+                <FiExternalLink className="w-4 h-4 sm:ml-2 ml-auto" aria-hidden="true" />
+              </span>
             )}
           </button>
         </div>
@@ -128,7 +130,7 @@ export default function JoinUs() {
                       <div className="text-lg sm:text-xl font-medium text-black mb-1">January 27</div>
                       <div className="text-base text-zinc-700 mb-1">Social Picnic Event</div>
                       <div className="text-sm text-zinc-600">
-                        Alternative indoor venue available in case of inclement weather
+                        Come out to meet current members of SPC
                       </div>
                     </div>
                   </div>
@@ -195,12 +197,13 @@ export default function JoinUs() {
                 {isApplicationOpen ? (
                   <>
                     Apply Now
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    <FiExternalLink className="w-4 h-4" aria-hidden="true" />
                   </>
                 ) : (
-                  "Apply (Opens Jan 20)"
+                  <>
+                    Apply Now
+                    <FiExternalLink className="w-4 h-4" aria-hidden="true" />
+                  </>
                 )}
               </button>
             </div>

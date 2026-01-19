@@ -14,7 +14,7 @@ function AccordionItem({ title, children, defaultOpen = false }: AccordionItemPr
     <div className="border-t border-[#E0E8F0]">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between py-4 text-left font-helvetica"
+        className="w-full flex items-center justify-between py-4 text-left font-helvetica hover:cursor-pointer"
         aria-expanded={isOpen}
       >
         <span className="text-lg font-medium text-black">{title}</span>
