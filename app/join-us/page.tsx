@@ -1,6 +1,25 @@
+"use client";
+
 import { Accordion } from "@/components/Accordion";
+import { useEffect, useState } from "react";
 
 export default function JoinUs() {
+  const [isApplicationOpen, setIsApplicationOpen] = useState(false);
+
+  useEffect(() => {
+    // Check if current time is >= Tuesday, January 20, 2026 12:00 AM PST
+    // PST is UTC-8, so we create the date in PST timezone
+    const applicationOpenDate = new Date("2026-01-20T08:00:00Z"); // 12:00 AM PST = 8:00 AM UTC
+    const now = new Date();
+    setIsApplicationOpen(now >= applicationOpenDate);
+  }, []);
+
+  const handleApplyClick = () => {
+    if (isApplicationOpen) {
+      window.open("https://forms.gle/YdR2rV4D2e2yZ1j98", "_blank", "noopener,noreferrer");
+    }
+  };
+
   const trackItems = [
     {
       title: "Junior Consultant Track",
@@ -33,7 +52,31 @@ export default function JoinUs() {
   return (
     <>
       <section className="container-inline pt-24 pb-20 max-w-6xl mx-auto">
-        <h1 className="font-helvetica text-4xl sm:text-6xl mb-10 tracking-tighter-title text-[#003262]">Join Us</h1>
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10">
+          <h1 className="font-helvetica text-4xl sm:text-6xl tracking-tighter-title text-[#003262]">Join Us</h1>
+          <button
+            onClick={handleApplyClick}
+            disabled={!isApplicationOpen}
+            className={`inline-flex items-center gap-2 rounded-full px-6 py-3 text-base font-helvetica font-medium transition-colors ${
+              isApplicationOpen
+                ? "bg-[#003262] text-white hover:bg-[#002244] cursor-pointer"
+                : "bg-zinc-300 text-zinc-500 cursor-not-allowed"
+            }`}
+            aria-label={isApplicationOpen ? "Apply to SPC" : "Applications open January 20, 2026"}
+            title={isApplicationOpen ? "Apply to SPC" : "Applications open January 20, 2026"}
+          >
+            {isApplicationOpen ? (
+              <>
+                Apply
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </>
+            ) : (
+              "Apply (Opens Jan 20)"
+            )}
+          </button>
+        </div>
 
         <div className="space-y-12">
           {/* Member Tracks Section */}
@@ -66,7 +109,7 @@ export default function JoinUs() {
                   <div className="relative pl-12">
                     <div className="absolute left-[0.8rem] top-2 w-2 h-2 rounded-full bg-[#003262] border-2 border-white"></div>
                     <div className="border border-[#E0E8F0] rounded-lg p-4 bg-white hover:border-[#003262] transition-colors">
-                      <div className="text-lg sm:text-xl font-medium text-black mb-1">January 21</div>
+                      <div className="text-lg sm:text-xl font-medium text-black mb-1">January 20</div>
                       <div className="text-base text-zinc-700">Information Tabling</div>
                     </div>
                   </div>
@@ -82,7 +125,7 @@ export default function JoinUs() {
                   <div className="relative pl-12">
                     <div className="absolute left-[0.8rem] top-2 w-2 h-2 rounded-full bg-[#003262] border-2 border-white"></div>
                     <div className="border border-[#E0E8F0] rounded-lg p-4 bg-white hover:border-[#003262] transition-colors">
-                      <div className="text-lg sm:text-xl font-medium text-black mb-1">January 27/28</div>
+                      <div className="text-lg sm:text-xl font-medium text-black mb-1">January 27</div>
                       <div className="text-base text-zinc-700 mb-1">Social Picnic Event</div>
                       <div className="text-sm text-zinc-600">
                         Alternative indoor venue available in case of inclement weather
@@ -102,7 +145,7 @@ export default function JoinUs() {
                     <div className="absolute left-[0.8rem] top-2 w-2 h-2 rounded-full bg-[#003262] border-2 border-white"></div>
                     <div className="border border-[#E0E8F0] rounded-lg p-4 bg-white hover:border-[#003262] transition-colors">
                       <div className="text-lg sm:text-xl font-medium text-black mb-1">January 30</div>
-                      <div className="text-base text-zinc-700">Application Review</div>
+                      <div className="text-base text-zinc-700">Applications Due</div>
                     </div>
                   </div>
                   
@@ -135,14 +178,44 @@ export default function JoinUs() {
 
             <div>
               <h2 className="font-helvetica text-2xl sm:text-3xl mb-4 tracking-tighter-title text-[#003262]">Application Process</h2>
-              <p className="font-helvetica text-zinc-700 text-lg leading-relaxed">
-                Application details and requirements will be posted here. Stay tuned for updates on how to apply to SPC.
+              <p className="font-helvetica text-zinc-700 text-lg leading-relaxed mb-6">
+                Submit your application through the form below. Selected candidates will be invited to participate in technical and behavioral interviews as part of our recruitment process.
               </p>
+              <button
+                onClick={handleApplyClick}
+                disabled={!isApplicationOpen}
+                className={`inline-flex items-center gap-2 rounded-full px-6 py-3 text-base font-helvetica font-medium transition-colors ${
+                  isApplicationOpen
+                    ? "bg-[#003262] text-white hover:bg-[#002244] cursor-pointer"
+                    : "bg-zinc-300 text-zinc-500 cursor-not-allowed"
+                }`}
+                aria-label={isApplicationOpen ? "Apply to SPC" : "Applications open January 20, 2026"}
+                title={isApplicationOpen ? "Apply to SPC" : "Applications open January 20, 2026"}
+              >
+                {isApplicationOpen ? (
+                  <>
+                    Apply Now
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </>
+                ) : (
+                  "Apply (Opens Jan 20)"
+                )}
+              </button>
             </div>
 
             <div className="bg-berkeley-blue-light p-8 mt-12 border-l-4 border-[#003262]">
               <p className="font-helvetica text-zinc-700 text-lg">
-                Interested in joining SPC? We're always looking for passionate students who want to make an impact through product management. More information coming soon.
+                {isApplicationOpen ? (
+                  <>
+                    Interested in joining SPC? Applications are now open. Click the Apply button above to submit your application and join our community of passionate product managers.
+                  </>
+                ) : (
+                  <>
+                    Interested in joining SPC? Applications open on January 20, 2026. We're looking for passionate students who want to make an impact through product management. Stay tuned for more information.
+                  </>
+                )}
               </p>
             </div>
           </div>
