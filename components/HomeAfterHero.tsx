@@ -83,7 +83,7 @@ export function HomeAfterHero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-4">
               <a 
-                href="/sponsorship.pdf" 
+                href="/pitchbook" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm bg-[#003262] text-white hover:bg-[#002244] transition-colors shadow-sm hover:shadow-md"
