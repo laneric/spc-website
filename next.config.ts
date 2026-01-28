@@ -25,6 +25,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/pitchbook",
+        destination: "/spc_pitchbook.pdf", // file in /public
+        permanent: false, // use true if you want a 308 permanent redirect
+      },
+    ];
+  },
 };
 
 export default nextConfig;
