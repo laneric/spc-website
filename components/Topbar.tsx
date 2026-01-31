@@ -47,6 +47,7 @@ export function Topbar() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
+    { href: "/ispma", label: "ISPMA" },
     { href: "/services", label: "Services" },
     { href: "/community", label: "Community" },
     { href: "/leadership", label: "Leadership" },
@@ -180,5 +181,4 @@ export function Topbar() {
     </>
   );
 }
-
 

@@ -29,12 +29,12 @@ function getCompanyLogoUrl(companyName: string): string {
     "Adobe": "adobe.com",
     "Dropbox": "dropbox.com",
   };
-  
+
   const domain = domainMap[companyName];
   if (domain) {
     return `https://img.logo.dev/${domain}?token=${LOGO_DEV_PUBLIC_KEY}`;
   }
-  
+
   // Fallback to local file path
   return `/logos/companies/${companyName.toLowerCase().replace(/\s+/g, "-")}.png`;
 }
@@ -82,20 +82,14 @@ export function HomeAfterHero() {
               Partner with SPC for client projects, sponsorship opportunities, or recruitment events. Access high-achieving UC Berkeley consultants with our 100% satisfaction guarantee.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-4">
-              <a 
-                href="/pitchbook" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <a
+                href={`mailto:ispma.berkeley@gmail.com`}
                 className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm bg-[#003262] text-white hover:bg-[#002244] transition-colors shadow-sm hover:shadow-md"
               >
-                Download Sponsorship Package
+                Work with SPC
               </a>
-            </div>
-            <div className="font-helvetica text-sm text-zinc-700">
-              <strong>Contact us:</strong>{" "}
-              <a href="mailto:ispma.berkeley@gmail.com" className="text-[#003262] hover:underline">
-                ispma.berkeley@gmail.com
-              </a>
+
+
             </div>
           </div>
         </div>
