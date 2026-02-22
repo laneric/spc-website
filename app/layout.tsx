@@ -5,7 +5,12 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Software Product @ Cal (SPC)",
-  description: "Bold. Modern. Minimal.",
+  description:
+    "UC Berkeley's first ISPMA student chapter.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
