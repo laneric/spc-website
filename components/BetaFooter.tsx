@@ -17,22 +17,20 @@ export function BetaFooter() {
   const isJoinUsPage = currentPath === "/join-us";
   const isAboutPage = currentPath === "/about";
   const isCommunityPage = currentPath === "/community";
-  const teamHref = isDeprecated ? `${routePrefix}/leadership` : "/deprecated/leadership";
   const columns = [
     {
       heading: "Services",
       links: [
         { label: "Client Projects", href: `${routePrefix}/services` },
         { label: "PM Curriculum", href: `${routePrefix}/about` },
-        { label: "ISPMA Summit", href: `${routePrefix}/ispma` },
-        { label: "Careers", href: `${routePrefix}/community` },
       ],
     },
     {
       heading: "Links",
       links: [
         { label: "About", href: `${routePrefix}/about` },
-        { label: "Team", href: teamHref },
+        { label: "ISPMA", href: `${routePrefix}/ispma` },
+        { label: "Careers", href: `${routePrefix}/community` },
       ],
     },
     {
