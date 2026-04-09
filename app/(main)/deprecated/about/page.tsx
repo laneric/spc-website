@@ -74,7 +74,7 @@ export default function AboutPage() {
           />
         </div>
         <div className="mt-6">
-          <Link href="/join-us" className="text-[#1573FF] hover:underline">Join SPC</Link>
+          <Link href="/deprecated/join-us" className="text-[#1573FF] hover:underline">Join SPC</Link>
         </div>
       </section>
     </div>

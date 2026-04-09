@@ -6,40 +6,43 @@ import { usePathname } from "next/navigation";
 
 const year = new Date().getFullYear();
 
-const columns = [
-  {
-    heading: "Services",
-    links: [
-      { label: "Client Projects", href: "/beta/services" },
-      { label: "PM Curriculum", href: "/beta/about" },
-      { label: "ISPMA Summit", href: "/beta/ispma" },
-      { label: "Careers", href: "/beta/community" },
-    ],
-  },
-  {
-    heading: "Links",
-    links: [
-      { label: "About", href: "/beta/about" },
-      { label: "Team", href: "/leadership" },
-    ],
-  },
-  {
-    heading: "Connect",
-    links: [
-      { label: "LinkedIn", href: "https://www.linkedin.com/company/uc-berkeley-spc/" },
-      { label: "Instagram", href: "https://www.instagram.com/spc.berkeley/" },
-    ],
-  },
-];
-
 export function BetaFooter() {
   const pathname = usePathname();
-  const isProjectPage = pathname?.startsWith("/beta/projects");
-  const isServicesPage = pathname === "/beta/services";
-  const isIspmaPage = pathname === "/beta/ispma";
-  const isJoinUsPage = pathname === "/beta/join-us";
-  const isAboutPage = pathname === "/beta/about";
-  const isCommunityPage = pathname === "/beta/community";
+  const isDeprecated = pathname?.startsWith("/deprecated") ?? false;
+  const currentPath = pathname ? pathname.replace(/^\/deprecated/, "") || "/" : "/";
+  const routePrefix = isDeprecated ? "/deprecated" : "";
+  const isProjectPage = currentPath.startsWith("/projects");
+  const isServicesPage = currentPath === "/services";
+  const isIspmaPage = currentPath === "/ispma";
+  const isJoinUsPage = currentPath === "/join-us";
+  const isAboutPage = currentPath === "/about";
+  const isCommunityPage = currentPath === "/community";
+  const teamHref = isDeprecated ? `${routePrefix}/leadership` : "/deprecated/leadership";
+  const columns = [
+    {
+      heading: "Services",
+      links: [
+        { label: "Client Projects", href: `${routePrefix}/services` },
+        { label: "PM Curriculum", href: `${routePrefix}/about` },
+        { label: "ISPMA Summit", href: `${routePrefix}/ispma` },
+        { label: "Careers", href: `${routePrefix}/community` },
+      ],
+    },
+    {
+      heading: "Links",
+      links: [
+        { label: "About", href: `${routePrefix}/about` },
+        { label: "Team", href: teamHref },
+      ],
+    },
+    {
+      heading: "Connect",
+      links: [
+        { label: "LinkedIn", href: "https://www.linkedin.com/company/uc-berkeley-spc/" },
+        { label: "Instagram", href: "https://www.instagram.com/spc.berkeley/" },
+      ],
+    },
+  ];
 
   return (
     <footer className="bg-[#F5F4F0] text-zinc-900">
@@ -55,7 +58,7 @@ export function BetaFooter() {
           building something that matters, we&apos;d love to hear about it.
         </p>
         <Link
-          href="/beta/join-us"
+          href={`${routePrefix}/join-us`}
           className="inline-flex items-center px-5 py-2.5 rounded-full bg-[#1573FF] text-white text-[20px] font-semibold hover:bg-[#1573FF]/85 transition-colors duration-200"
         >
           Say hi
@@ -118,8 +121,8 @@ export function BetaFooter() {
           <span>© {year} Software Product @ Cal</span>
         </div>
         <div className="flex items-center gap-5">
-          <Link href="/beta/about" className="hover:text-zinc-700 transition-colors duration-150">Practices</Link>
-          <Link href="/beta/join-us" className="hover:text-zinc-700 transition-colors duration-150">Join us</Link>
+          <Link href={`${routePrefix}/about`} className="hover:text-zinc-700 transition-colors duration-150">Practices</Link>
+          <Link href={`${routePrefix}/join-us`} className="hover:text-zinc-700 transition-colors duration-150">Join us</Link>
         </div>
       </div>
     </footer>

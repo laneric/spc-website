@@ -91,7 +91,7 @@ function HoverableLogoItem({
 
   return (
     <Link
-      href={`/beta/projects/${company.slug}`}
+      href={`/projects/${company.slug}`}
       className="relative flex flex-col items-center cursor-pointer"
       style={{
         marginLeft: index === 0 ? 0 : -16,

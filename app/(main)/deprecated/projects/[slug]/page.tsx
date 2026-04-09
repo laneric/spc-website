@@ -14,7 +14,7 @@ export default async function ProjectPage({ params }: Props) {
   return (
     <div className="min-h-screen bg-[#FAFAF9] text-zinc-900 pt-24">
       <div className="max-w-3xl mx-auto px-6 py-16">
-        <Link href="/services" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-zinc-200/60 text-zinc-700 text-sm font-medium mb-16">
+        <Link href="/deprecated/services" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-zinc-200/60 text-zinc-700 text-sm font-medium mb-16">
           Services
         </Link>
         <p className="text-sm font-medium font-mono uppercase text-zinc-400 mb-3">{project.duration}</p>

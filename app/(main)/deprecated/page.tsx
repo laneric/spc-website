@@ -32,7 +32,7 @@ export default function Home() {
         />
         <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-3xl">
           <Link
-            href="/services"
+            href="/deprecated/services"
             className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-md text-white/90 text-lg font-medium tracking-tight mb-8 duration-200"
             style={{ boxShadow: "rgba(255, 255, 255, 0.2) 1px 1px 8px 0px inset" }}
           >
@@ -45,7 +45,7 @@ export default function Home() {
             A student club with unreasonable ambitions. We run live client projects, teach PM from first principles, and connect students with the world&apos;s top product minds.
           </p>
           <Link
-            href="/join-us"
+            href="/deprecated/join-us"
             className="inline-flex items-center px-6 py-2.5 rounded-full bg-white text-black text-lg font-medium tracking-tight hover:bg-neutral-300 hover:text-neutral-900 transition-all duration-200"
           >
             Join us

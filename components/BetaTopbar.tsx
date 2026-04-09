@@ -10,12 +10,15 @@ const FADE_FAST: Transition = { duration: 0.18, ease: "easeOut" as const };
 
 export function BetaTopbar() {
   const pathname = usePathname();
-  const isProjectPage = pathname?.startsWith("/beta/projects");
-  const isServicesPage = pathname === "/beta/services";
-  const isIspmaPage = pathname === "/beta/ispma";
-  const isJoinUsPage = pathname === "/beta/join-us";
-  const isAboutPage = pathname === "/beta/about";
-  const isCommunityPage = pathname === "/beta/community";
+  const isDeprecated = pathname?.startsWith("/deprecated") ?? false;
+  const currentPath = pathname ? pathname.replace(/^\/deprecated/, "") || "/" : "/";
+  const routePrefix = isDeprecated ? "/deprecated" : "";
+  const isProjectPage = currentPath.startsWith("/projects");
+  const isServicesPage = currentPath === "/services";
+  const isIspmaPage = currentPath === "/ispma";
+  const isJoinUsPage = currentPath === "/join-us";
+  const isAboutPage = currentPath === "/about";
+  const isCommunityPage = currentPath === "/community";
 
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -55,10 +58,10 @@ export function BetaTopbar() {
   }, [menuOpen]);
 
   const navLinks = [
-    { href: "/beta/about", label: "About" },
-    { href: "/beta/ispma", label: "ISPMA" },
-    { href: "/beta/services", label: "Services" },
-    { href: "/beta/community", label: "Careers" },
+    { href: `${routePrefix}/about`, label: "About" },
+    { href: `${routePrefix}/ispma`, label: "ISPMA" },
+    { href: `${routePrefix}/services`, label: "Services" },
+    { href: `${routePrefix}/community`, label: "Careers" },
   ];
 
   return (
@@ -109,7 +112,7 @@ export function BetaTopbar() {
           />
 
           <Link
-            href="/beta"
+            href={routePrefix || "/"}
             className="relative z-10 flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/5 transition-colors shrink-0"
           >
             <Image
@@ -163,7 +166,7 @@ export function BetaTopbar() {
                 className="relative z-10 overflow-hidden shrink-0"
               >
                 <Link
-                  href="/beta/join-us"
+                  href={`${routePrefix}/join-us`}
                   className="block whitespace-nowrap px-4 py-1.5 text-[15px] font-semibold tracking-tight text-white rounded-full bg-[#1573FF] hover:bg-[#1573FF]/80 transition-colors duration-150"
                 >
                   Join us
@@ -229,7 +232,7 @@ export function BetaTopbar() {
             >
               <div className="flex items-center justify-between px-6 pt-4">
                 <Link
-                  href="/beta"
+                  href={routePrefix || "/"}
                   onClick={() => setMenuOpen(false)}
                   className="flex h-9 w-9 items-center justify-center rounded-full"
                 >
@@ -272,7 +275,7 @@ export function BetaTopbar() {
                 </ul>
 
                 <Link
-                  href="/beta/join-us"
+                  href={`${routePrefix}/join-us`}
                   onClick={() => setMenuOpen(false)}
                   className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-[#1573FF] px-5 py-2.5 text-[17px] font-semibold tracking-tight text-white"
                 >
