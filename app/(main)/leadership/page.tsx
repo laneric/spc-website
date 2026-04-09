@@ -12,16 +12,13 @@ export default function Leadership() {
       </section>
 
       <div className="container-inline pb-20">
-        <div style={{ height: 'calc(100vh - 500px)', width: '100%', minHeight: '600px' }}>
-          <iframe 
-            src="https://ripple-increase-bbd.notion.site/ebd//2eaddfe3637f804b91e0fcd7745aee3f?v=2eaddfe3637f80ee9e91000cdeda645f" 
-            width="100%" 
-            height="100%"
-            frameBorder="0" 
-            allowFullScreen
-            style={{ border: 'none', display: 'block' }}
-          />
-        </div>
+        <iframe
+          src="https://ripple-increase-bbd.notion.site/ebd//2eaddfe3637f804b91e0fcd7745aee3f?v=2eaddfe3637f80ee9e91000cdeda645f"
+          width="100%"
+          height="600"
+          frameBorder="0"
+          allowFullScreen
+        />
       </div>
     </>
   );

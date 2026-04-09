@@ -5,13 +5,13 @@
   /* Primary Colors */
   --berkeley-blue: #003262;
   --california-gold: #FDB515;
-  
+
   /* Color variants for backgrounds and accents */
   --berkeley-blue-light: #F0F4F8;
   --berkeley-blue-dark: #002244;
   --california-gold-light: #FEF0C7;
   --california-gold-dark: #E6A000;
-  
+
   /* Glassmorphism tokens */
   --spc-glass-bg: rgba(255, 255, 255, 0.7);
   --spc-glass-border: rgba(0, 50, 98, 0.08);
@@ -25,6 +25,9 @@
   --color-california-gold: #FDB515;
   --color-california-gold-light: #FEF0C7;
   --color-california-gold-dark: #E6A000;
+
+  --font-sans: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), "Instrument Serif", ui-serif, Georgia, serif;
 }
 
 /* Typography utility classes */
@@ -111,11 +114,25 @@ a:not([class]):hover {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
 
 /* Intentionally minimal: prefer inline Tailwind utilities in components */
+
+/* Beta topbar pill: dark frosted-glass capsule with satin top-edge sheen */
+.beta-topbar-pill {
+  border-bottom-width: 0.5px;
+  border-color: rgba(0, 0, 0, 0.12);
+  border-left-width: 0.5px;
+  border-right-width: 0.5px;
+  border-style: solid;
+  border-top-width: 0.5px;
+  backdrop-filter: blur(10px);
+  /* Soft outer glow */
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 0.48175px 0.48175px -1.25px, rgba(0, 0, 0, 0.16) 0px 1.83083px 1.83083px -2.5px, rgba(0, 0, 0, 0.06) 0px 8px 8px -3.75px, rgba(255, 255, 255, 0.72) 0.240875px 0.240875px 0.340649px -1.25px inset, rgba(255, 255, 255, 0.64) 0.915413px 0.915413px 1.29459px -2.5px inset, rgba(255, 255, 255, 0.25) 4px 4px 5.65685px -3.75px inset;
+}
 
 /* Hide Notion page header (works for both react-notion and react-notion-x) */
 .notion-header,
@@ -125,4 +142,14 @@ a:not([class]):hover {
 .notion-page-header-block,
 .notion-page-title {
   display: none !important;
+}
+
+/* Infinite marquee animation */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee linear infinite;
 }

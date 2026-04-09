@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "framer-motion": "^12.35.2",
     "next": "16.0.10",
     "notion-client": "^7.7.3",
     "prismjs": "^1.30.0",
