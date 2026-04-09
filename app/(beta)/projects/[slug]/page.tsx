@@ -27,7 +27,7 @@ export default async function ProjectPage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-[#FAFAF9] text-zinc-900 pt-24">
-      <div className="max-w-3xl mx-auto px-6 py-16">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
         {/* Back button — chevron matches beta homepage pill */}
         <Link
           href="/services"

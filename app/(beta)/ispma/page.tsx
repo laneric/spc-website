@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function BetaIspmaPage() {
   return (
     <div className="min-h-screen bg-[#FAFAF9] text-zinc-900 pt-24">
-      <div className="max-w-5xl mx-auto w-full px-16 py-16">
+      <div className="max-w-5xl mx-auto w-full px-4 sm:px-12 lg:px-16 py-16">
         {/* Header */}
         <h1 className="text-4xl sm:text-5xl md:text-[72px] tracking-tight font-medium text-black mb-6">
           ISPMA

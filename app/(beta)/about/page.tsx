@@ -132,7 +132,7 @@ const timelineItems: TimelineItem[] = [
 export default function BetaAboutPage() {
   return (
     <div className="min-h-screen bg-[#FAFAF9] text-zinc-900 pt-24">
-      <div className="max-w-5xl mx-auto w-full px-6 sm:px-12 lg:px-16 py-16">
+      <div className="max-w-5xl mx-auto w-full px-4 sm:px-12 lg:px-16 py-16">
         <header className="text-center max-w-2xl mx-auto mb-20 md:mb-24">
           <h1 className="text-4xl sm:text-5xl md:text-[72px] tracking-tight font-medium text-black">About SPC</h1>
           <p className="text-zinc-500 text-[20px] font-medium tracking-tight leading-[28px] mt-4">
@@ -193,7 +193,7 @@ export default function BetaAboutPage() {
 
       <section
         id="leadership"
-        className="max-w-6xl mx-auto w-full px-6 sm:px-12 lg:px-16 pb-20 md:pb-28 scroll-mt-28"
+        className="max-w-6xl mx-auto w-full px-4 sm:px-12 lg:px-16 pb-20 md:pb-28 scroll-mt-28"
       >
         <h2 className="text-2xl font-medium text-black tracking-tight mb-2">Leadership</h2>
         <p className="text-zinc-600 text-[20px] font-medium tracking-tight leading-relaxed max-w-3xl mb-8">

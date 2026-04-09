@@ -1,17 +1,10 @@
-import type { Metadata } from "next";
 import { BetaTopbar } from "@/components/BetaTopbar";
 import { BetaFooter } from "@/components/BetaFooter";
+import { siteMetadata } from "@/lib/site-metadata";
 import { inter, instrumentSerif } from "../fonts";
 import "../globals.css";
 
-export const metadata: Metadata = {
-  title: "SPC Beta",
-  description: "Beta version of the Software Product @ Cal website.",
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-  },
-};
+export const metadata = siteMetadata;
 
 export default function BetaLayout({
   children,

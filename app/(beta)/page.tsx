@@ -46,7 +46,7 @@ export default function BetaHome() {
         />
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-3xl">
+        <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-3xl">
           <Link
             href="/services"
             className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-md text-white/90 text-lg font-medium tracking-tight mb-8 duration-200"
@@ -112,7 +112,7 @@ export default function BetaHome() {
         </div>
       </section>
 
-      <section className="relative bg-[#2171eaff] pt-28 pb-72 px-6">
+      <section className="relative bg-[#2171eaff] pt-28 pb-72 px-4">
         <div className="relative z-10 max-w-4xl mx-auto text-left text-white">
           <p className="text-[20px] font-medium text-white/60 mb-4">Our Impact</p>
           <h2 className="text-4xl sm:text-5xl font-medium tracking-tighter mb-4">
@@ -147,7 +147,7 @@ export default function BetaHome() {
       </section>
 
       <section className="bg-[#F5F4F0] pb-24">
-        <div className="text-center px-6 pt-4 pb-14">
+        <div className="text-center px-4 pt-4 pb-14">
           <h2 className="text-4xl sm:text-5xl font-medium tracking-tighter text-zinc-900 mb-3">
             Loved by our community
           </h2>
@@ -160,7 +160,7 @@ export default function BetaHome() {
       </section>
 
       <section
-        className="relative py-28 px-6 min-h-[56vh] bg-[#FAFAF9] overflow-hidden"
+        className="relative py-28 px-4 min-h-[56vh] bg-[#FAFAF9] overflow-hidden"
         style={{
           backgroundImage: `
             linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px),

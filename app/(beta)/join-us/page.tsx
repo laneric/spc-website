@@ -73,7 +73,7 @@ export default function BetaJoinUs() {
 
   return (
     <div className="min-h-screen bg-[#FAFAF9] text-zinc-900 pt-24">
-      <div className="max-w-5xl mx-auto w-full px-16 py-16">
+      <div className="max-w-5xl mx-auto w-full px-4 sm:px-12 lg:px-16 py-16">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 mb-12">
           <h1 className="text-4xl sm:text-5xl md:text-[72px] tracking-tight font-medium text-black">Join us</h1>
           <button
