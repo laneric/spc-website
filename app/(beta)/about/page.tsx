@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 const NOTION_LEADERSHIP_EMBED_SRC =
-  "https://ripple-increase-bbd.notion.site/ebd//2eaddfe3637f804b91e0fcd7745aee3f?v=2eaddfe3637f80ee9e91000cdeda645f";
+  "https://ripple-increase-bbd.notion.site/ebd//33eddfe3637f80d59003dc612a0ac59e?v=33eddfe3637f808fa63c000c9a3bc9fb";
 
 type SubPoint = { heading: string; text: string };
 

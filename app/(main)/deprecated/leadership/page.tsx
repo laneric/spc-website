@@ -13,7 +13,7 @@ export default function Leadership() {
 
       <div className="container-inline pb-20">
         <iframe
-          src="https://ripple-increase-bbd.notion.site/ebd//2eaddfe3637f804b91e0fcd7745aee3f?v=2eaddfe3637f80ee9e91000cdeda645f"
+          src="https://ripple-increase-bbd.notion.site/ebd//33eddfe3637f80d59003dc612a0ac59e?v=33eddfe3637f808fa63c000c9a3bc9fb"
           width="100%"
           height="600"
           frameBorder="0"
