@@ -174,6 +174,26 @@ export function BetaTopbar() {
               </motion.div>
             )}
           </AnimatePresence>
+
+          <AnimatePresence>
+            {showPill && !isProjectPage && (
+              <motion.div
+                key="coffee-cta"
+                initial={{ opacity: 0, x: 8, width: 0, marginLeft: 0 }}
+                animate={{ opacity: 1, x: 0, width: "auto", marginLeft: 4 }}
+                exit={{ opacity: 0, x: 8, width: 0, marginLeft: 0 }}
+                transition={{ ...SPRING, opacity: FADE_FAST }}
+                className="relative z-10 overflow-hidden shrink-0"
+              >
+                <Link
+                  href={`${routePrefix}/join-us#coffee-chats`}
+                  className="block whitespace-nowrap px-4 py-1.5 text-[15px] font-semibold tracking-tight text-black rounded-full bg-[#FDB515] hover:bg-[#FDB515]/80 transition-colors duration-150"
+                >
+                  Coffee chat us
+                </Link>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.div>
       </motion.div>
 
@@ -280,6 +300,14 @@ export function BetaTopbar() {
                   className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-[#1573FF] px-5 py-2.5 text-[17px] font-semibold tracking-tight text-white"
                 >
                   Join us
+                </Link>
+
+                <Link
+                  href={`${routePrefix}/join-us#coffee-chats`}
+                  onClick={() => setMenuOpen(false)}
+                  className="mt-3 inline-flex w-full items-center justify-center rounded-full bg-[#FDB515] px-5 py-2.5 text-[17px] font-semibold tracking-tight text-black"
+                >
+                  Coffee chat us
                 </Link>
               </div>
             </motion.div>

@@ -1,9 +1,17 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { ImageCarousel } from "@/components/ImageCarousel";
 
-const LOGO_DEV_PUBLIC_KEY = 'pk_CVnF_-TmQ9y4_mmec2mHMw';
+// NOTE: this component used to also render "Our Impact" stats and a
+// "Portfolio" logo teaser. Both were removed (2026-08-22) because they
+// duplicated/conflicted with the Impact and Recent Work sections that
+// already live directly on app/(beta)/page.tsx with different numbers.
+// This file now only owns the For Students / For Companies split sections.
+//
+// Re-themed 2026-08-22 to the dark navy/gold branding: section backgrounds
+// use the two exact "Simple/Backgrounds" colors from the branding doc
+// (#194070 dark blue, #2d1b69 dark violet) rather than the old light
+// Berkeley-blue/gold tints.
 
 const studentsImages = [
   '/photos/spc-old-photos/confetti.jpg',
@@ -20,42 +28,23 @@ const companiesImages = [
   '/photos/spc-old-photos/nvidia.jpg'
 ];
 
-// Helper function to get logo URL for a company
-function getCompanyLogoUrl(companyName: string): string {
-  const domainMap: Record<string, string> = {
-    "Oracle": "oracle.com",
-    "Zocdoc": "zocdoc.com",
-    "ZocDoc": "zocdoc.com",
-    "Adobe": "adobe.com",
-    "Dropbox": "dropbox.com",
-  };
-
-  const domain = domainMap[companyName];
-  if (domain) {
-    return `https://img.logo.dev/${domain}?token=${LOGO_DEV_PUBLIC_KEY}`;
-  }
-
-  // Fallback to local file path
-  return `/logos/companies/${companyName.toLowerCase().replace(/\s+/g, "-")}.png`;
-}
-
 export function HomeAfterHero() {
   return (
     <>
       {/* For Students Section - Split Layout */}
-      <section className="container-inline section-y bg-berkeley-blue-light">
+      <section className="container-inline section-y" style={{ backgroundColor: "#194070" }}>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
-            <div className="font-helvetica text-xs sm:text-sm tracking-wider text-[#003262] mb-4 font-medium">
+            <div className="font-helvetica text-xs sm:text-sm tracking-wider text-[#f5c971] mb-4 font-medium">
               For Students
             </div>
-            <h2 className="font-helvetica text-4xl sm:text-5xl md:text-6xl leading-[1.1] tracking-tighter-title mb-6">
+            <h2 className="font-helvetica text-4xl sm:text-5xl md:text-6xl leading-[1.1] tracking-tighter-title mb-6 text-white">
               From Learning<br />to Launching
             </h2>
-            <p className="font-helvetica text-zinc-700 text-lg leading-relaxed mb-6">
+            <p className="font-helvetica text-white/70 text-lg leading-relaxed mb-6">
               At SPC, we take pride in our firm commitment to product management education. We offer the Junior Consultant Track and Consultant Track for our members who come with various levels of experience.
             </p>
-            <Link href="/join-us" className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm bg-[#003262] text-white hover:bg-[#002244] transition-colors shadow-sm hover:shadow-md">
+            <Link href="/join-us" className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold bg-gradient-to-r from-[#bf8d36] to-[#f5c971] text-[#2c1a04] hover:brightness-105 transition-all shadow-sm hover:shadow-md">
               Learn More
             </Link>
           </div>
@@ -66,25 +55,25 @@ export function HomeAfterHero() {
       </section>
 
       {/* For Companies Section - Split Layout (Reversed) */}
-      <section className="container-inline section-y bg-california-gold-light">
+      <section className="container-inline section-y" style={{ backgroundColor: "#2d1b69" }}>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="relative aspect-video md:aspect-square overflow-hidden rounded-lg order-2 md:order-1">
             <ImageCarousel images={companiesImages} alt="SPC Companies" />
           </div>
           <div className="order-1 md:order-2">
-            <div className="font-helvetica text-xs sm:text-sm tracking-wider text-[#003262] mb-4 font-medium">
+            <div className="font-helvetica text-xs sm:text-sm tracking-wider text-[#f5c971] mb-4 font-medium">
               For Companies
             </div>
-            <h2 className="font-helvetica text-4xl sm:text-5xl md:text-6xl leading-[1.1] tracking-tighter-title mb-6">
+            <h2 className="font-helvetica text-4xl sm:text-5xl md:text-6xl leading-[1.1] tracking-tighter-title mb-6 text-white">
               Partner with<br />Berkeley's Top Product Talent
             </h2>
-            <p className="font-helvetica text-zinc-700 text-lg leading-relaxed mb-6">
+            <p className="font-helvetica text-white/70 text-lg leading-relaxed mb-6">
               Partner with SPC for client projects, sponsorship opportunities, or recruitment events. Access high-achieving UC Berkeley consultants with our 100% satisfaction guarantee.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-4">
               <a
                 href={`mailto:ispma.berkeley@gmail.com`}
-                className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm bg-[#003262] text-white hover:bg-[#002244] transition-colors shadow-sm hover:shadow-md"
+                className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold bg-gradient-to-r from-[#bf8d36] to-[#f5c971] text-[#2c1a04] hover:brightness-105 transition-all shadow-sm hover:shadow-md"
               >
                 Work with SPC
               </a>
@@ -94,69 +83,6 @@ export function HomeAfterHero() {
           </div>
         </div>
       </section>
-
-      {/* Our Impact Section */}
-      <section className="container-inline section-y">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-helvetica text-4xl sm:text-6xl mb-6 tracking-tighter-title text-center">
-            Our Impact
-          </h2>
-          <p className="font-helvetica text-zinc-700 text-lg leading-relaxed max-w-3xl mx-auto text-center mb-12">
-            With mentorship from industry leaders and a track record of success, SPC empowers students to thrive in product management and launch careers at top companies like Amazon, Uber, and IBM.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <div className="bg-white rounded-lg p-8 text-center border-2 border-[#FDB515] shadow-sm">
-              <div className="font-helvetica text-5xl sm:text-6xl mb-3 text-[#FDB515] font-bold">1st</div>
-              <div className="font-helvetica text-sm sm:text-base text-zinc-700">University Chapter Worldwide</div>
-            </div>
-            <div className="bg-white rounded-lg p-8 text-center border-2 border-[#003262] shadow-sm">
-              <div className="font-helvetica text-5xl sm:text-6xl mb-3 text-[#003262] font-bold">30+</div>
-              <div className="font-helvetica text-sm sm:text-base text-zinc-700">Active Members</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio teaser */}
-      <section className="container-inline section-y mb-30">
-        <div className="max-w-6xl mx-auto grid gap-6 md:gap-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-6 md:gap-0">
-            <div className="flex flex-col items-start justify-start gap-4">
-              <h3 className="font-helvetica text-4xl sm:text-5xl tracking-tighter-title">Our Portfolio</h3>
-              <Link href="/about" className="inline-flex rounded-full items-center gap-2 px-4 py-2 text-sm bg-[#003262] text-white hover:bg-[#002244] transition-colors shadow-sm hover:shadow-md">See work →</Link>
-            </div>
-            <div className="flex items-start md:items-center justify-start gap-4">
-              <p className="font-helvetica text-zinc-700 max-w-md">
-                We collaborate with startups and campus partners to build impactful products. From
-                dev tools to fintech, our teams work end to end - discovery to delivery.
-              </p>
-            </div>
-          </div>
-
-          {/* Logo grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[
-              "Oracle",
-              "Zocdoc",
-              "Adobe",
-              "Dropbox",
-            ].map((label) => (
-              <div key={label} className="h-32 flex items-center justify-center p-4">
-                <Image
-                  src={getCompanyLogoUrl(label)}
-                  alt={label}
-                  width={160}
-                  height={60}
-                  className="object-contain max-h-20 w-full"
-                  unoptimized
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }
-
-
