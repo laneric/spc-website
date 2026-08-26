@@ -23,30 +23,31 @@ const timelineItems: TimelineItem[] = [
     imageAlt: "SPC members together at a retreat",
     body: (
       <>
-        We’re UC Berkeley’s ISPMA student chapter. People here say what they think about the work, keep the bar
-        high without being cruel, and leave space to get things wrong and fix them.
+        We&apos;re UC Berkeley&apos;s ISPMA student chapter. People here tell you what they actually think about your
+        work, the bar stays reasonably high, and it&apos;s fine to get something wrong as long as you fix it.
       </>
     ),
     subPoints: [
       {
-        heading: "Craft Without Theater",
-        text: "We care about clear writing, clear decisions, and decks that earn their length. Nobody is here to perform being busy.",
+        heading: "How We Communicate",
+        text: "We try to write clearly and make decisions people can actually follow. A deck should be as long as it needs to be, not longer.",
       },
       {
-        heading: "Actually For Students",
-        text: "Mentors and leads are trying to help you level up. The point is useful reps and real ownership, not resume filler.",
+        heading: "Built For Students",
+        text: "Mentors and leads are here because they want to help you get better at this. That mostly means real ownership over real work, with enough support that you're not on your own.",
       },
     ],
   },
   {
     label: "Our Community",
-    title: "Not Only The Work",
+    title: "Work Hard, Play Hard",
     byline: "SPC · Community",
     imageSrc: "/photos/community/BIGLITTLE_REVEAL_1.png",
     imageAlt: "SPC community at a big-little reveal",
     body: (
       <>
-        Retreats, socials, and low-key hangs are a real part of the club, not an afterthought. Photos and updates on{" "}
+        Retreats, socials, and smaller hangouts are a normal part of being in the club, not something we tack on.
+        We post updates on{" "}
         <Link
           href="https://www.instagram.com/spc.berkeley/"
           className="text-[#f5c971] hover:underline"
@@ -55,7 +56,7 @@ const timelineItems: TimelineItem[] = [
         >
           Instagram
         </Link>
-        ; longer stuff on{" "}
+        , and longer recaps on{" "}
         <Link
           href="https://www.linkedin.com/company/uc-berkeley-spc/"
           className="text-[#f5c971] hover:underline"
@@ -70,34 +71,35 @@ const timelineItems: TimelineItem[] = [
     subPoints: [
       {
         heading: "Big-Little",
-        text: "New members get paired with someone who’s been around a while, so you’re not guessing who to ask first.",
+        text: "New members get paired with someone who's already been through it, so there's always someone to ask when you're not sure who else to go to.",
       },
       {
         heading: "The Rest Of College",
-        text: "Formals, IMs, random weeknight hangs. Some of the friendships last longer than any single project.",
+        text: "Formals, intramurals, random weeknight plans. Some of the friendships from this club end up outlasting any one project.",
       },
     ],
   },
   {
     label: "How We Work",
-    title: "Client Projects At The Center",
+    title: "Client Interests at Heart",
     byline: "SPC · Client projects",
     imageSrc: "/photos/spc-old-photos/formal-group.jpg",
     imageAlt: "SPC formal group photo",
     body: (
       <>
-        Most semesters, small teams ship real work with a partner company. Workshops and curriculum chase the same habits:
-        figure out what problem you’re solving, decide what to build, and be able to explain the tradeoffs out loud.
+        Most semesters, a small team works on real deliverables for a partner company. The workshops and curriculum
+        are built around the same core skills: figuring out what problem you're actually solving, deciding what to
+        build, and being able to explain the reasoning behind it.
       </>
     ),
     subPoints: [
       {
         heading: "Junior And Consultant Tracks",
-        text: "You start with more support and take on more client-facing responsibility as you’re ready. Nothing magical, just structure.",
+        text: "New members get more support at first and take on more client-facing work as they're ready for it.",
       },
       {
         heading: "ISPMA",
-        text: "We’re a chapter of a larger org. When you want context outside Berkeley, that network is there.",
+        text: "We're a chapter of a larger organization, so there's a network beyond Berkeley if you want context from outside the club.",
       },
     ],
   },
@@ -109,18 +111,19 @@ const timelineItems: TimelineItem[] = [
     imageAlt: "SPC at the North American Software Product Management Summit",
     body: (
       <>
-        People head into product, strategy, and engineering at lots of different companies. The common thread is usually
-        that they’ve already practiced talking through messy, ambiguous work with other people in the room.
+        People end up in product, strategy, and engineering roles at a range of companies. Most of them have already
+        had practice talking through messy, unclear problems with other people in the room, which tends to be the
+        thing that carries over.
       </>
     ),
     subPoints: [
       {
         heading: "Concrete Stories",
-        text: "Interviews tend to be about what you shipped, what surprised you, and what you’d try differently next time.",
+        text: "Interviews usually come down to what you actually shipped, what surprised you along the way, and what you'd do differently next time.",
       },
       {
         heading: "People Who Stay In Touch",
-        text: "Alumni and sponsors come back for coffee or recruiting. The summit trip is one of the things that still feels tangible years later.",
+        text: "Alumni and sponsors come back for coffee chats or recruiting. The summit trip is one of the things people still bring up years later.",
       },
     ],
   },
