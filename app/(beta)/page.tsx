@@ -58,9 +58,7 @@ export default function BetaHome() {
               }}
             />
             <p className="text-white/70 text-base sm:text-lg font-medium leading-[28px] max-w-xl">
-              UC Berkeley&apos;s ISPMA chapter. Small teams run real client projects with
-              companies like Oracle, Adobe, and Dropbox, and learn product management
-              by doing it, not sitting through case studies.
+              UC Berkeley&apos;s Most Innovative Tech Product Organization
             </p>
           </div>
 
@@ -118,7 +116,7 @@ export default function BetaHome() {
             Built By Students. Felt By The Industry.
           </h2>
           <p className="text-zinc-600 text-base sm:text-lg font-medium max-w-lg mb-16">
-            No simulations, no fake case studies. Our students do real product work, with real companies, on real deadlines.
+             Our community provides PM mentorship to the broader student population through hosting semesterly summits, coordinating speaker events, and working with the best in our industry.
           </p>
 
           <div className="flex items-start gap-16">
@@ -166,8 +164,8 @@ export default function BetaHome() {
             What We&apos;ve Been Working On
           </h2>
           <p className="text-zinc-600 text-[17px] sm:text-[20px] font-medium tracking-tight leading-[28px]">
-            We have worked with clients spanning across industries. Some of our past clients
-            include Oracle, Adobe, Dropbox, and more to come.
+            We have worked with clients spanning across industries, including
+            SpaceX, Adobe, and Dropbox.
           </p>
           <CompanyLogoStack />
         </div>
@@ -184,8 +182,8 @@ export default function BetaHome() {
             Think We&apos;d Vibe?
           </h2>
           <p className="text-white/70 text-base sm:text-lg mb-10 max-w-xl mx-auto">
-            Whether you&apos;re a student looking to build real product experience, or a
-            company looking for a team that ships, let&apos;s talk.
+            Whether you&apos;re a student looking to build real product experience or a
+            company looking for a efficient team of PMs, we would love to talk.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
