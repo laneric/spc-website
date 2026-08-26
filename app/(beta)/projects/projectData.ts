@@ -131,4 +131,52 @@ export const PROJECTS: Record<string, Project> = {
       },
     ],
   },
+  spacex: {
+    slug: "spacex",
+    name: "SpaceX",
+    duration: "Spring 2026",
+    logoDomain: "spacex.com",
+    logoShape: "roundedXl",
+    // TODO: replace with the actual project intro/summary once available.
+    intro: "[TODO] Add a summary of the SpaceX engagement here.",
+    sections: [
+      {
+        heading: "Supporting assets include",
+        // TODO: replace with real deliverables from the engagement.
+        items: ["[TODO] Add deliverables for this project."],
+      },
+    ],
+  },
+  redo: {
+    slug: "redo",
+    name: "Redo",
+    duration: "Spring 2026",
+    logoDomain: "getredo.com",
+    logoShape: "roundedXl",
+    // TODO: replace with the actual project intro/summary once available.
+    intro: "[TODO] Add a summary of the Redo engagement here.",
+    sections: [
+      {
+        heading: "Supporting assets include",
+        // TODO: replace with real deliverables from the engagement.
+        items: ["[TODO] Add deliverables for this project."],
+      },
+    ],
+  },
+  "capital-one": {
+    slug: "capital-one",
+    name: "Capital One",
+    duration: "Spring 2026",
+    logoDomain: "capitalone.com",
+    logoShape: "roundedXl",
+    // TODO: replace with the actual project intro/summary once available.
+    intro: "[TODO] Add a summary of the Capital One engagement here.",
+    sections: [
+      {
+        heading: "Supporting assets include",
+        // TODO: replace with real deliverables from the engagement.
+        items: ["[TODO] Add deliverables for this project."],
+      },
+    ],
+  },
 };

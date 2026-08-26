@@ -2,9 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-const NOTION_LEADERSHIP_EMBED_SRC =
-  "https://ripple-increase-bbd.notion.site/ebd//33eddfe3637f80d59003dc612a0ac59e?v=33eddfe3637f808fa63c000c9a3bc9fb";
-
 type SubPoint = { heading: string; text: string };
 
 type TimelineItem = {
@@ -52,7 +49,7 @@ const timelineItems: TimelineItem[] = [
         Retreats, socials, and low-key hangs are a real part of the club, not an afterthought. Photos and updates on{" "}
         <Link
           href="https://www.instagram.com/spc.berkeley/"
-          className="text-[#1573FF] hover:underline"
+          className="text-[#f5c971] hover:underline"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -61,7 +58,7 @@ const timelineItems: TimelineItem[] = [
         ; longer stuff on{" "}
         <Link
           href="https://www.linkedin.com/company/uc-berkeley-spc/"
-          className="text-[#1573FF] hover:underline"
+          className="text-[#f5c971] hover:underline"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -131,11 +128,11 @@ const timelineItems: TimelineItem[] = [
 
 export default function BetaAboutPage() {
   return (
-    <div className="min-h-screen bg-[#FAFAF9] text-zinc-900 pt-24">
+    <div className="min-h-screen text-white pt-24" style={{ backgroundColor: "#05071c" }}>
       <div className="max-w-5xl mx-auto w-full px-4 sm:px-12 lg:px-16 py-16">
         <header className="text-center max-w-2xl mx-auto mb-20 md:mb-24">
-          <h1 className="text-4xl sm:text-5xl md:text-[72px] tracking-tight font-medium text-black">About SPC</h1>
-          <p className="text-zinc-500 text-[20px] font-medium tracking-tight leading-[28px] mt-4">
+          <h1 className="text-4xl sm:text-5xl md:text-[72px] tracking-tight font-medium text-white">About SPC</h1>
+          <p className="text-white/60 text-[20px] font-medium tracking-tight leading-[28px] mt-4">
             Software Product @ Cal teaches product through Berkeley coursework and live client projects. We’re a
             community of people who show up for the work and for each other.
           </p>
@@ -143,7 +140,7 @@ export default function BetaAboutPage() {
 
         <div className="relative">
           <div
-            className="pointer-events-none absolute left-[3.9px] top-10 bottom-10 hidden md:block w-px bg-zinc-200"
+            className="pointer-events-none absolute left-[3.9px] top-10 bottom-10 hidden md:block w-px bg-[#dba951]/20"
             aria-hidden="true"
           />
 
@@ -152,21 +149,22 @@ export default function BetaAboutPage() {
               <article key={item.label} className="flex flex-col md:flex-row gap-6 md:gap-10 md:items-start">
                 <div className="relative z-[1] flex items-start gap-3 md:w-48 shrink-0">
                   <span
-                    className="mt-[9px] size-[8.8px] shrink-0 rounded-full bg-black ring-[5px] ring-[#FAFAF9]"
+                    className="mt-[9px] size-[8.8px] shrink-0 rounded-full bg-[#dba951] ring-[5px]"
+                    style={{ boxShadow: "0 0 0 5px #05071c" }}
                     aria-hidden="true"
                   />
-                  <span className="text-[20px] font-medium tracking-tight text-zinc-500 leading-snug">
+                  <span className="text-[20px] font-medium tracking-tight text-white/50 leading-snug">
                     {item.label}
                   </span>
                 </div>
 
                 <div className="min-w-0 flex-1 space-y-5">
                   <div>
-                    <h2 className="text-[40px] font-medium text-black tracking-tighter leading-none">{item.title}</h2>
-                    <p className="text-[17px] text-zinc-400 font-medium mt-1">{item.byline}</p>
+                    <h2 className="text-[40px] font-medium text-white tracking-tighter leading-none">{item.title}</h2>
+                    <p className="text-[17px] text-white/40 font-medium mt-1">{item.byline}</p>
                   </div>
 
-                  <div className="relative w-full aspect-16/10 rounded-3xl overflow-hidden bg-zinc-200">
+                  <div className="relative w-full aspect-16/10 rounded-3xl overflow-hidden bg-white/5">
                     <Image
                       src={item.imageSrc}
                       alt={item.imageAlt}
@@ -176,12 +174,12 @@ export default function BetaAboutPage() {
                     />
                   </div>
 
-                  <p className="text-zinc-600 text-[20px] font-medium tracking-tight leading-relaxed">{item.body}</p>
+                  <p className="text-white/70 text-[20px] font-medium tracking-tight leading-relaxed">{item.body}</p>
 
                   {item.subPoints?.map((sp) => (
                     <div key={sp.heading}>
-                      <h3 className="text-[20px] font-semibold text-black tracking-tight">{sp.heading}</h3>
-                      <p className="text-zinc-600 text-[20px] font-medium tracking-tight leading-relaxed mt-1">{sp.text}</p>
+                      <h3 className="text-[20px] font-semibold text-[#f5c971] tracking-tight">{sp.heading}</h3>
+                      <p className="text-white/70 text-[20px] font-medium tracking-tight leading-relaxed mt-1">{sp.text}</p>
                     </div>
                   ))}
                 </div>
@@ -190,26 +188,6 @@ export default function BetaAboutPage() {
           </div>
         </div>
       </div>
-
-      <section
-        id="leadership"
-        className="max-w-6xl mx-auto w-full px-4 sm:px-12 lg:px-16 pb-20 md:pb-28 scroll-mt-28"
-      >
-        <h2 className="text-2xl font-medium text-black tracking-tight mb-2">Leadership</h2>
-        <p className="text-zinc-600 text-[20px] font-medium tracking-tight leading-relaxed max-w-3xl mb-8">
-          Meet our executive board and learn how to book a coffee chat
-        </p>
-        <div className="w-full rounded-2xl overflow-hidden border border-zinc-200/80 bg-white shadow-sm min-h-[600px] md:min-h-[720px] h-[calc(100vh-12rem)] md:h-[720px]">
-          <iframe
-            title="SPC leadership on Notion"
-            src={NOTION_LEADERSHIP_EMBED_SRC}
-            width="100%"
-            height="100%"
-            className="border-0 block min-h-[600px] md:min-h-[720px] h-full w-full"
-            allowFullScreen
-          />
-        </div>
-      </section>
     </div>
   );
 }

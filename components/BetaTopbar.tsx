@@ -74,7 +74,7 @@ export function BetaTopbar() {
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       >
         <motion.div
-          className="relative flex items-center rounded-full"
+          className="relative flex items-center rounded-none"
           initial={{
             backgroundColor: "rgba(255,255,255,0)",
             borderColor: "rgba(0,0,0,0)",
@@ -88,26 +88,26 @@ export function BetaTopbar() {
             boxShadow: "none",
           }}
           animate={{
-            backgroundColor: showPill ? "rgba(255,255,255,0.60)" : "rgba(255,255,255,0)",
-            borderColor: showPill ? "rgba(0,0,0,0.12)" : "rgba(0,0,0,0)",
+            backgroundColor: showPill ? "rgba(5,7,28,0.75)" : "rgba(255,255,255,0)",
+            borderColor: showPill ? "rgba(219,169,81,0.25)" : "rgba(0,0,0,0)",
             paddingLeft: showPill ? 8 : 16,
             paddingRight: showPill ? 8 : 16,
             paddingTop: showPill ? 6 : 8,
             paddingBottom: showPill ? 6 : 8,
             backdropFilter: showPill ? "blur(10px)" : "blur(0px)",
             boxShadow: showPill
-              ? "rgba(0,0,0,0.18) 0px 0.48px 0.48px -1.25px, rgba(0,0,0,0.16) 0px 1.83px 1.83px -2.5px, rgba(0,0,0,0.06) 0px 8px 8px -3.75px, rgba(255,255,255,0.72) 0.24px 0.24px 0.34px -1.25px inset, rgba(255,255,255,0.64) 0.92px 0.92px 1.29px -2.5px inset, rgba(255,255,255,0.25) 4px 4px 5.66px -3.75px inset"
+              ? "rgba(0,0,0,0.35) 0px 8px 24px -6px, rgba(219,169,81,0.12) 0.24px 0.24px 0.34px -1.25px inset, rgba(219,169,81,0.08) 0.92px 0.92px 1.29px -2.5px inset"
               : "none",
           }}
           transition={SPRING}
         >
           <motion.div
-            className="pointer-events-none absolute inset-0 rounded-full"
+            className="pointer-events-none absolute inset-0 rounded-none"
             aria-hidden="true"
             animate={{ opacity: showPill ? 1 : 0 }}
             transition={FADE_FAST}
             style={{
-              background: "linear-gradient(to bottom, rgba(255,255,255,0.13) 0%, rgba(255,255,255,0.04) 40%, transparent 70%)",
+              background: "linear-gradient(to bottom, rgba(219,169,81,0.08) 0%, rgba(219,169,81,0.03) 40%, transparent 70%)",
             }}
           />
 
@@ -136,7 +136,7 @@ export function BetaTopbar() {
                   animate={{
                     paddingLeft: showPill ? 14 : 18,
                     paddingRight: showPill ? 14 : 18,
-                    color: showPill ? "rgba(0,0,0,0.55)" : "rgba(255,255,255,1)",
+                    color: showPill ? "rgba(255,255,255,0.75)" : "rgba(255,255,255,1)",
                   }}
                   transition={{
                     paddingLeft: SPRING,
@@ -146,7 +146,7 @@ export function BetaTopbar() {
                 >
                   <Link
                     href={link.href}
-                    className="block py-1.5 text-[15px] font-medium tracking-tight rounded-full hover:text-[#1573FF] hover:underline transition-colors duration-150"
+                    className="block py-1.5 text-[15px] font-medium tracking-tight rounded-full hover:text-[#f5c971] hover:underline transition-colors duration-150"
                   >
                     {link.label}
                   </Link>
@@ -167,9 +167,9 @@ export function BetaTopbar() {
               >
                 <Link
                   href={`${routePrefix}/join-us`}
-                  className="block whitespace-nowrap px-4 py-1.5 text-[15px] font-semibold tracking-tight text-white rounded-full bg-[#1573FF] hover:bg-[#1573FF]/80 transition-colors duration-150"
+                  className="block whitespace-nowrap px-4 py-1.5 text-[15px] font-semibold tracking-tight text-[#2c1a04] rounded-none bg-gradient-to-r from-[#bf8d36] to-[#f5c971] hover:brightness-105 transition-all duration-150"
                 >
-                  Join us
+                  Join Us
                 </Link>
               </motion.div>
             )}
@@ -180,16 +180,16 @@ export function BetaTopbar() {
               <motion.div
                 key="coffee-cta"
                 initial={{ opacity: 0, x: 8, width: 0, marginLeft: 0 }}
-                animate={{ opacity: 1, x: 0, width: "auto", marginLeft: 4 }}
+                animate={{ opacity: 1, x: 0, width: "auto", marginLeft: 10 }}
                 exit={{ opacity: 0, x: 8, width: 0, marginLeft: 0 }}
                 transition={{ ...SPRING, opacity: FADE_FAST }}
                 className="relative z-10 overflow-hidden shrink-0"
               >
                 <Link
                   href={`${routePrefix}/join-us#coffee-chats`}
-                  className="block whitespace-nowrap px-4 py-1.5 text-[15px] font-semibold tracking-tight text-black rounded-full bg-[#FDB515] hover:bg-[#FDB515]/80 transition-colors duration-150"
+                  className="block whitespace-nowrap px-4 py-1.5 text-[15px] font-semibold tracking-tight text-[#f5c971] rounded-none border border-[#dba951]/40 hover:bg-white/10 transition-colors duration-150"
                 >
-                  Coffee chat us
+                  Coffee Chat Us
                 </Link>
               </motion.div>
             )}
@@ -210,13 +210,13 @@ export function BetaTopbar() {
           aria-label="Open menu"
           aria-expanded={menuOpen}
           className={`relative flex h-11 w-11 items-center justify-center rounded-full border transition-colors ${
-            showPill ? "border-black/10 text-black" : "border-white/45 text-white"
+            showPill ? "border-[#dba951]/30 text-white" : "border-white/45 text-white"
           }`}
           style={{
-            background: showPill ? "rgba(255,255,255,0.68)" : "rgba(255,255,255,0.12)",
+            background: showPill ? "rgba(5,7,28,0.8)" : "rgba(255,255,255,0.12)",
             backdropFilter: "blur(10px)",
             boxShadow: showPill
-              ? "rgba(0,0,0,0.15) 0px 2px 10px, rgba(255,255,255,0.45) 0 1px 0 inset"
+              ? "rgba(0,0,0,0.35) 0px 2px 12px, rgba(219,169,81,0.15) 0 1px 0 inset"
               : "rgba(0,0,0,0.28) 0px 2px 12px, rgba(255,255,255,0.30) 0 1px 0 inset",
           }}
         >
@@ -244,7 +244,8 @@ export function BetaTopbar() {
             />
 
             <motion.div
-              className="fixed top-3 left-4 right-4 z-50 rounded-[30px] border border-black/10 bg-white/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,0,0,0.25)] sm:hidden"
+              className="fixed top-3 left-4 right-4 z-50 rounded-[30px] border border-[#dba951]/25 shadow-[0_20px_40px_rgba(0,0,0,0.5)] sm:hidden"
+              style={{ backgroundColor: "rgba(5,7,28,0.92)", backdropFilter: "blur(20px)" }}
               initial={{ opacity: 0, y: -12, scale: 0.97 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -12, scale: 0.97 }}
@@ -270,7 +271,7 @@ export function BetaTopbar() {
                   type="button"
                   onClick={() => setMenuOpen(false)}
                   aria-label="Close menu"
-                  className="flex h-9 w-9 items-center justify-center rounded-full text-black/75 hover:bg-black/5"
+                  className="flex h-9 w-9 items-center justify-center rounded-full text-white/75 hover:bg-white/10"
                 >
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.25">
                     <path strokeLinecap="round" d="M6 6l12 12" />
@@ -286,7 +287,7 @@ export function BetaTopbar() {
                       <Link
                         href={link.href}
                         onClick={() => setMenuOpen(false)}
-                        className="whitespace-nowrap text-[17px] font-medium tracking-tight text-zinc-600 hover:text-[#1573FF] transition-colors"
+                        className="whitespace-nowrap text-[17px] font-medium tracking-tight text-white/70 hover:text-[#f5c971] transition-colors"
                       >
                         {link.label}
                       </Link>
@@ -297,17 +298,17 @@ export function BetaTopbar() {
                 <Link
                   href={`${routePrefix}/join-us`}
                   onClick={() => setMenuOpen(false)}
-                  className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-[#1573FF] px-5 py-2.5 text-[17px] font-semibold tracking-tight text-white"
+                  className="mt-5 inline-flex w-full items-center justify-center rounded-none bg-gradient-to-r from-[#bf8d36] to-[#f5c971] px-5 py-2.5 text-[17px] font-semibold tracking-tight text-[#2c1a04]"
                 >
-                  Join us
+                  Join Us
                 </Link>
 
                 <Link
                   href={`${routePrefix}/join-us#coffee-chats`}
                   onClick={() => setMenuOpen(false)}
-                  className="mt-3 inline-flex w-full items-center justify-center rounded-full bg-[#FDB515] px-5 py-2.5 text-[17px] font-semibold tracking-tight text-black"
+                  className="mt-4 inline-flex w-full items-center justify-center rounded-none border border-[#dba951]/40 px-5 py-2.5 text-[17px] font-semibold tracking-tight text-[#f5c971]"
                 >
-                  Coffee chat us
+                  Coffee Chat Us
                 </Link>
               </div>
             </motion.div>

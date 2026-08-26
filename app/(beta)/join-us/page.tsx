@@ -2,7 +2,12 @@
 
 import { JoinUsSubnav } from "@/components/JoinUsSubnav";
 import { useEffect, useState } from "react";
-import { FiChevronDown, FiExternalLink } from "react-icons/fi";
+import { FiExternalLink } from "react-icons/fi";
+
+// Moved from the About page's Leadership section 2026-08-24 — fits better
+// here since it's what people use to actually book a coffee chat.
+const NOTION_LEADERSHIP_EMBED_SRC =
+  "https://ripple-increase-bbd.notion.site/ebd//33eddfe3637f80d59003dc612a0ac59e?v=33eddfe3637f808fa63c000c9a3bc9fb";
 
 // Dark navy/gold recruitment theme, scoped to this page only 2026-08-22.
 // Rest of the site (Home, About, etc.) stays on the light Berkeley-blue
@@ -12,7 +17,6 @@ const timelineCardClass =
 
 export default function BetaJoinUs() {
   const [isApplicationOpen, setIsApplicationOpen] = useState(false);
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   useEffect(() => {
     const applicationOpenDate = new Date("2026-01-20T08:00:00Z");
@@ -22,42 +26,18 @@ export default function BetaJoinUs() {
 
   const handleApplyClick = () => {
     if (isApplicationOpen) {
-      window.open("https://forms.gle/YdR2rV4D2e2yZ1j98", "_blank", "noopener,noreferrer");
+      window.open("https://forms.gle/ozKVCsux7yNAf8US9", "_blank", "noopener,noreferrer");
     }
   };
 
   const applyButtonClass = isApplicationOpen
-    ? "inline-flex items-center gap-2 rounded-full px-8 py-4 text-lg font-semibold tracking-tight text-[#2c1a04] bg-gradient-to-r from-[#bf8d36] to-[#f5c971] shadow-lg shadow-[#bf8d36]/20 hover:shadow-xl hover:shadow-[#bf8d36]/30 hover:scale-105 cursor-pointer transition-all duration-200"
-    : "inline-flex items-center gap-2 rounded-full px-8 py-4 text-lg font-semibold tracking-tight bg-white/10 text-white/40 cursor-not-allowed";
+    ? "inline-flex items-center justify-center gap-2 w-full sm:w-64 rounded-none px-8 py-4 text-lg font-semibold tracking-tight text-[#2c1a04] bg-gradient-to-r from-[#bf8d36] to-[#f5c971] shadow-lg shadow-[#bf8d36]/20 hover:shadow-xl hover:shadow-[#bf8d36]/30 hover:scale-105 cursor-pointer transition-all duration-200"
+    : "inline-flex items-center justify-center gap-2 w-full sm:w-64 rounded-none px-8 py-4 text-lg font-semibold tracking-tight bg-white/10 text-white/40 cursor-not-allowed";
 
   // NOTE: Member Tracks section (Junior Consultant / Consultant accordion)
   // was removed 2026-08-22 per strategy doc instruction.
-
-  // FAQ + exec advice. Only one real quote exists so far (from the strategy
-  // doc). TODO: ask exec for more advice quotes and real FAQ content —
-  // placeholders below are marked and should not ship as-is.
-  const faqItems = [
-    {
-      title: "Do I need prior product management experience to apply?",
-      content: (
-        <p className="text-base tracking-tight font-medium leading-relaxed">
-          &ldquo;Don&apos;t worry about prior experience and focus on showcasing your collaborative and positive
-          attitude.&rdquo; — Leinita Panda
-        </p>
-      ),
-    },
-    {
-      // TODO: replace with a real question + exec answer
-      title: "[TODO] Add another FAQ question here",
-      content: <p className="text-base tracking-tight font-medium leading-relaxed text-white/40">Placeholder — needs exec input.</p>,
-    },
-  ];
-
-  // TODO: swap these for real, club-approved PM interview prep resources.
-  const interviewPrepLinks: Array<{ label: string; href: string }> = [
-    { label: "[TODO] Add PM interview prep resource 1", href: "#" },
-    { label: "[TODO] Add PM interview prep resource 2", href: "#" },
-  ];
+  // NOTE: FAQ & Advice from Exec and PM Interview Prep Resources sections
+  // removed 2026-08-25 per request.
 
   // Updated 2026-08-22: this was still the old Spring-cycle timeline
   // (Jan 20 - Feb 2), which contradicted the "Fall 2026 recruitment" hero
@@ -72,14 +52,19 @@ export default function BetaJoinUs() {
     end?: string; // ISO date, defaults to start if omitted
   };
 
+  // Updated 2026-08-24: full timeline now confirmed via flyer — replaces the
+  // earlier partial version (which only had Tabling + 2 info sessions, with
+  // the rest marked TBD).
   const timelineEvents: TimelineEvent[] = [
-    { date: "August 26 – 31", title: "SPC Tabling", subtitle: "Sproul Plaza", start: "2026-08-26", end: "2026-08-31" },
-    { date: "August 30", title: "Information Session 1", subtitle: "Wheeler Hall", start: "2026-08-30", end: "2026-08-30" },
-    { date: "September 2", title: "Information Session 2", subtitle: "Wheeler Hall", start: "2026-09-02", end: "2026-09-02" },
-    { date: "TBD", title: "Applications Due" },
-    { date: "TBD", title: "Technical Interview" },
-    { date: "TBD", title: "Social Event" },
-    { date: "TBD", title: "Behavioral Interview" },
+    { date: "August 26 – September 4", title: "Tabling + Coffee Chats", subtitle: "Sproul Plaza, 8am–4pm", start: "2026-08-26", end: "2026-09-04" },
+    { date: "September 1", title: "Info Session 1", subtitle: "Social Sciences 54, 8–10pm", start: "2026-09-01", end: "2026-09-01" },
+    { date: "September 2", title: "Women in Tech Night", subtitle: "Dwinelle 219, 8–10pm", start: "2026-09-02", end: "2026-09-02" },
+    { date: "September 3", title: "Info Session 2", subtitle: "Social Sciences 54, 8–10pm", start: "2026-09-03", end: "2026-09-03" },
+    { date: "September 4", title: "Picnic with SPC", subtitle: "The Glade, 12–2pm", start: "2026-09-04", end: "2026-09-04" },
+    { date: "September 4", title: "Applications Due", subtitle: "Online, 5pm", start: "2026-09-04", end: "2026-09-04" },
+    { date: "September 5 – 6", title: "Case Interview", subtitle: "Invite only", start: "2026-09-05", end: "2026-09-06" },
+    { date: "September 8", title: "Social Night", subtitle: "Invite only", start: "2026-09-08", end: "2026-09-08" },
+    { date: "September 9", title: "Behavioral Interview", subtitle: "Invite only", start: "2026-09-09", end: "2026-09-09" },
   ];
 
   // "You are here" marker: inserted right before the first event that
@@ -121,24 +106,32 @@ export default function BetaJoinUs() {
           <div>
             <p className="font-serif italic text-[#dba951] text-2xl sm:text-3xl mb-1">Software Product</p>
             <h1 className="text-4xl sm:text-5xl md:text-[64px] tracking-tight font-semibold text-white">
-              Fall 2026 recruitment
+              Fall 2026 Recruitment
             </h1>
             <p className="text-white/60 text-sm sm:text-base mt-2">
-              UC Berkeley&apos;s most innovative tech product organization
+              UC Berkeley&apos;s Most Innovative Tech Product Organization
             </p>
           </div>
-          <button
-            onClick={handleApplyClick}
-            disabled={!isApplicationOpen}
-            className={applyButtonClass}
-            aria-label={isApplicationOpen ? "Apply to SPC" : "Applications open January 20, 2026"}
-            title={isApplicationOpen ? "Apply to SPC" : "Applications open January 20, 2026"}
-          >
-            <span className="flex w-full items-center justify-between sm:justify-center">
-              <span>Apply Now</span>
-              <FiExternalLink className="w-5 h-5 sm:ml-2 ml-auto" aria-hidden="true" />
-            </span>
-          </button>
+          <div className="flex flex-col items-stretch sm:items-end gap-2">
+            <button
+              onClick={handleApplyClick}
+              disabled={!isApplicationOpen}
+              className={applyButtonClass}
+              aria-label={isApplicationOpen ? "Apply to SPC" : "Applications open January 20, 2026"}
+              title={isApplicationOpen ? "Apply to SPC" : "Applications open January 20, 2026"}
+            >
+              <span className="flex w-full items-center justify-between sm:justify-center">
+                <span>Apply Now</span>
+                <FiExternalLink className="w-5 h-5 sm:ml-2 ml-auto" aria-hidden="true" />
+              </span>
+            </button>
+            <a
+              href="#coffee-chats"
+              className="inline-flex items-center justify-center gap-1.5 w-full sm:w-64 rounded-none border border-[#dba951]/40 px-8 py-4 text-lg font-semibold tracking-tight text-[#f5c971] hover:bg-white/10 transition-colors"
+            >
+              Coffee Chat Us
+            </a>
+          </div>
         </div>
 
         {/* Member Tracks section removed 2026-08-22 per strategy doc */}
@@ -177,8 +170,8 @@ export default function BetaJoinUs() {
                         <div className={`relative pl-12 ${cardOpacity}`}>
                           <div className={`absolute left-[0.8rem] top-2 w-2 h-2 rounded-full shadow-sm ${dotClass}`} aria-hidden="true" />
                           <div className={timelineCardClass}>
-                            <div className="text-lg sm:text-xl font-medium text-white mb-1">{ev.date}</div>
-                            <div className="text-base text-white/70 font-medium">{ev.title}</div>
+                            <div className="text-lg sm:text-xl font-medium text-white mb-1">{ev.title}</div>
+                            <div className="text-base text-white/70 font-medium">{ev.date}</div>
                             {ev.subtitle ? <div className="text-sm text-white/50 font-medium mt-1">{ev.subtitle}</div> : null}
                           </div>
                         </div>
@@ -216,71 +209,26 @@ export default function BetaJoinUs() {
               </button>
             </div>
 
-            {/* TODO — no booking link exists yet (same blocker as the Home
-                page). Wire the real Calendly/Notion table in here once exec
-                fills out the form. Called out in the subnav since it's
-                recruitment season. */}
-            <div id="coffee-chats" className="scroll-mt-32 rounded-2xl border border-[#dba951]/40 bg-gradient-to-br from-[#5c3b2d]/40 to-[#3f282c]/40 backdrop-blur-sm p-6 sm:p-8">
+            {/* Notion embed moved here from About's Leadership section
+                2026-08-24 — it's the exec board + booking table, which
+                fits the recruitment page better than About. */}
+            <div id="coffee-chats" className="scroll-mt-32">
               <h2 className="text-2xl font-medium text-[#f5c971] tracking-tight mb-2">Coffee Chats</h2>
-              <p className="text-white/70 text-base font-medium leading-relaxed">
-                Table and booking link coming soon — check back closer to Informal Coffee Chats on January 20.
+              <p className="text-white/70 text-base font-medium leading-relaxed mb-6">
+                Meet our executive board and book a coffee chat below.
               </p>
-            </div>
-
-            <div id="faq" className="scroll-mt-32">
-              <h2 className="text-2xl font-medium text-[#f5c971] tracking-tight mb-4">FAQ &amp; Advice from Exec</h2>
-              {/* Custom themed accordion (2026-08-22), replacing the shared
-                  Accordion component — that one only ships a light-on-white
-                  style, which read as a separate block dropped onto the dark
-                  page. Built inline here rather than adding a dark variant
-                  to the shared component, since it's only used on this page. */}
-              <div className="space-y-3">
-                {faqItems.map((item, i) => {
-                  const isOpen = openFaqIndex === i;
-                  return (
-                    <div
-                      key={item.title}
-                      className="rounded-xl border border-[#dba951]/20 bg-white/[0.04] backdrop-blur-sm overflow-hidden"
-                    >
-                      <button
-                        type="button"
-                        onClick={() => setOpenFaqIndex(isOpen ? null : i)}
-                        aria-expanded={isOpen}
-                        className="w-full flex items-center justify-between gap-4 text-left px-5 py-4"
-                      >
-                        <span className="text-base sm:text-lg font-medium text-white tracking-tight">{item.title}</span>
-                        <FiChevronDown
-                          className={`w-5 h-5 shrink-0 text-[#dba951] transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
-                          aria-hidden="true"
-                        />
-                      </button>
-                      {isOpen ? (
-                        <div className="px-5 pb-5 text-white/70">{item.content}</div>
-                      ) : null}
-                    </div>
-                  );
-                })}
+              <div className="w-full rounded-2xl overflow-hidden border border-[#dba951]/40 bg-white shadow-sm min-h-[600px] md:min-h-[720px] h-[calc(100vh-12rem)] md:h-[720px]">
+                <iframe
+                  title="SPC leadership on Notion"
+                  src={NOTION_LEADERSHIP_EMBED_SRC}
+                  width="100%"
+                  height="100%"
+                  className="border-0 block min-h-[600px] md:min-h-[720px] h-full w-full"
+                  allowFullScreen
+                />
               </div>
             </div>
 
-            {/* TODO: replace placeholder links with real, club-approved PM
-                interview prep resources. */}
-            <div id="interview-prep" className="scroll-mt-32">
-              <h2 className="text-2xl font-medium text-[#f5c971] tracking-tight mb-4">PM Interview Prep Resources</h2>
-              <ul className="space-y-2">
-                {interviewPrepLinks.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="inline-flex items-center gap-2 text-[#f5c971] font-medium hover:underline"
-                    >
-                      {link.label}
-                      <FiExternalLink className="w-4 h-4" aria-hidden="true" />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
       </div>
