@@ -48,7 +48,7 @@ export const PROJECTS: Record<string, Project> = {
       "Comprehensive written report consolidating all research findings, Gen Z user insights, UX journey analysis, and comparative audit of peer platforms with actionable design recommendations. Final presentation summarizing key insights, identified pain points, and strategic product recommendations.",
     sections: [
       {
-        heading: "Supporting assets include",
+        heading: "Supporting Assets Include",
         items: [
           "Interview/survey summary reports and detailed user personas.",
           "Journey maps of provider search and booking flows.",
@@ -68,7 +68,7 @@ export const PROJECTS: Record<string, Project> = {
       "Comprehensive written report consolidating all research findings, user insights, competitive analysis, and design recommendations. Final presentation summarizing key insights, proposed AI agent use cases, and strategic product recommendations.",
     sections: [
       {
-        heading: "Supporting assets include",
+        heading: "Supporting Assets Include",
         items: [
           "Interview summary reports and detailed user personas",
           "Journey maps and identified AI agent interaction flows",
@@ -88,7 +88,7 @@ export const PROJECTS: Record<string, Project> = {
       "Comprehensive written report consolidating all research findings, workflow mapping, customer insights, success metrics, and design recommendations. Final presentation summarizing key insights, prioritized automation opportunities, proposed AI Intern use cases, and recommended roadmap for future pilots.",
     sections: [
       {
-        heading: "Supporting assets include",
+        heading: "Supporting Assets Include",
         items: [
           "Interview and survey summary reports with synthesized customer insights.",
           "Workflow maps highlighting repetitive, low-complexity tasks and identified AI agent opportunities.",
@@ -141,7 +141,7 @@ export const PROJECTS: Record<string, Project> = {
     intro: "[TODO] Add a summary of the SpaceX engagement here.",
     sections: [
       {
-        heading: "Supporting assets include",
+        heading: "Supporting Assets Include",
         // TODO: replace with real deliverables from the engagement.
         items: ["[TODO] Add deliverables for this project."],
       },
@@ -157,7 +157,7 @@ export const PROJECTS: Record<string, Project> = {
     intro: "[TODO] Add a summary of the Redo engagement here.",
     sections: [
       {
-        heading: "Supporting assets include",
+        heading: "Supporting Assets Include",
         // TODO: replace with real deliverables from the engagement.
         items: ["[TODO] Add deliverables for this project."],
       },
@@ -173,7 +173,7 @@ export const PROJECTS: Record<string, Project> = {
     intro: "[TODO] Add a summary of the Capital One engagement here.",
     sections: [
       {
-        heading: "Supporting assets include",
+        heading: "Supporting Assets Include",
         // TODO: replace with real deliverables from the engagement.
         items: ["[TODO] Add deliverables for this project."],
       },

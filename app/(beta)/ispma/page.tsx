@@ -67,7 +67,7 @@ export default function BetaIspmaPage() {
               </div>
               <div className="p-8">
                 <h2 className="text-2xl font-medium text-white tracking-tight mb-4">
-                  Annual Trip to India
+                  Annual Trip To India
                 </h2>
                 <p className="text-white/70 text-base font-medium leading-relaxed">
                   Every year, SPC sponsors two members to travel to India and
@@ -105,14 +105,14 @@ export default function BetaIspmaPage() {
         {/* CTA — punchy heading + understated button, ISPMA focused */}
         <section className="mt-20">
           <h2 className="text-3xl sm:text-4xl font-medium text-white tracking-tight mb-8 max-w-2xl">
-            Explore the standards, certifications, and global network behind
-            product management excellence.
+            Explore The Standards, Certifications, And Global Network Behind
+            Product Management Excellence.
           </h2>
           <a
             href="https://ispma.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex px-4 py-2 rounded-full bg-gradient-to-r from-[#bf8d36] to-[#f5c971] text-[#2c1a04] text-sm font-semibold hover:brightness-105 transition-all"
+            className="inline-flex px-4 py-2 rounded-none bg-gradient-to-r from-[#bf8d36] to-[#f5c971] text-[#2c1a04] text-sm font-semibold hover:brightness-105 transition-all"
           >
             Visit ISPMA
           </a>

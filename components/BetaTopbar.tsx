@@ -61,7 +61,9 @@ export function BetaTopbar() {
     { href: `${routePrefix}/about`, label: "About" },
     { href: `${routePrefix}/ispma`, label: "ISPMA" },
     { href: `${routePrefix}/services`, label: "Services" },
-    { href: `${routePrefix}/community`, label: "Careers" },
+    // Careers (/community) hidden 2026-08-25 per request — page still
+    // exists and returns 404 (see app/(beta)/community/page.tsx), so
+    // re-adding this link is enough to bring it back.
   ];
 
   return (

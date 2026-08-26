@@ -11,11 +11,7 @@ const photos = [
   "/photos/community/retreat_1.png",
   "/photos/spc-old-photos/banquet.jpg",
   "/photos/spc-old-photos/banquet2.jpg",
-  "/photos/spc-old-photos/confetti.jpg",
-  "/photos/spc-old-photos/exec.jpeg",
-  "/photos/spc-old-photos/formal-group.jpg",
   "/photos/spc-old-photos/hiking.jpg",
-  "/photos/spc-old-photos/newbie.jpg",
   "/photos/spc-old-photos/retreat_fa24.jpg",
   "/photos/spc-old-photos/sixflags (1).jpg",
   "/photos/spc-old-photos/sixflags.jpg",
@@ -23,7 +19,10 @@ const photos = [
   "/photos/spc-old-photos/spc-exec.jpg",
   "/photos/spc-old-photos/spc-group.jpg",
   "/photos/spc-old-photos/summit2024.jpg",
-  "/photos/FULL_CLUB_PHOTO.JPG",
+  "/photos/spc-old-photos/fa26_1.jpg",
+  "/photos/spc-old-photos/fa26_2.jpg",
+  "/photos/spc-old-photos/fa26_3.jpg",
+  "/photos/spc-old-photos/fa26_4.jpg",
 ];
 
 const SPEED = 10; // px per second

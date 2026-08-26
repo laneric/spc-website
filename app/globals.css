@@ -30,6 +30,11 @@
   --font-serif: var(--font-instrument-serif), "Instrument Serif", ui-serif, Georgia, serif;
 }
 
+/* Added 2026-08-25: all headers site-wide use Times New Roman per request. */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Times New Roman", Times, serif;
+}
+
 /* Typography utility classes */
 .font-helvetica {
   font-family: "Helvetica Neue", Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;

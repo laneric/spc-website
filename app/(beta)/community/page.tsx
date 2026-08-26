@@ -1,3 +1,13 @@
+import { notFound } from "next/navigation";
+
+// Hidden 2026-08-25 per request — page returns 404. All original content
+// preserved below in CareersPageContent; to bring it back, restore the
+// nav link in components/BetaTopbar.tsx and swap the default export below
+// to `return <CareersPageContent />;`.
+export default function BetaCareers() {
+  notFound();
+}
+
 type CareerCompany = {
   name: string;
   description: string;
@@ -28,7 +38,8 @@ const careerCompanies: CareerCompany[] = [
   { name: "JPMorgan Chase", description: "Delivering digital banking at enterprise scale", year: "2025", url: "https://www.jpmorganchase.com" },
 ];
 
-export default function BetaCareers() {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars -- kept for easy restoration, see comment above
+function CareersPageContent() {
   return (
     <div className="min-h-screen text-white pt-24" style={{ backgroundColor: "#05071c" }}>
       <section className="max-w-5xl mx-auto w-full px-4 sm:px-12 lg:px-16 py-16">

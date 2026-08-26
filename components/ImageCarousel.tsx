@@ -8,7 +8,7 @@ interface ImageCarouselProps {
   interval?: number; // milliseconds between transitions
 }
 
-export function ImageCarousel({ images, alt, interval = 3000 }: ImageCarouselProps) {
+export function ImageCarousel({ images, alt, interval = 6000 }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
@@ -20,7 +20,7 @@ export function ImageCarousel({ images, alt, interval = 3000 }: ImageCarouselPro
       setTimeout(() => {
         setCurrentIndex((prev) => (prev + 1) % images.length);
         setFade(true);
-      }, 250); // Half of transition duration for smooth fade
+      }, 700); // Half of transition duration for smooth fade
     }, interval);
 
     return () => clearInterval(timer);
@@ -34,10 +34,9 @@ export function ImageCarousel({ images, alt, interval = 3000 }: ImageCarouselPro
         src={images[currentIndex]}
         alt={alt}
         fill
-        className={`object-cover transition-opacity duration-500 ${fade ? "opacity-100" : "opacity-0"}`}
+        className={`object-cover transition-opacity duration-[1400ms] ease-in-out ${fade ? "opacity-100" : "opacity-0"}`}
         unoptimized
       />
     </div>
   );
 }
-

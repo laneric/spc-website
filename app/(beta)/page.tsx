@@ -14,10 +14,10 @@ export default function BetaHome() {
         {/* Background photo */}
         <Image
           src="/photos/community/ClubProfPic2.jpg"
-          alt="SPC formal group photo"
+          alt="SPC formal group photo on the steps of a building"
           fill
           className="object-cover"
-          style={{ objectPosition: "center calc(50% - 100px)" }}
+          style={{ objectPosition: "center 35%" }}
           priority
         />
 
@@ -58,7 +58,9 @@ export default function BetaHome() {
               }}
             />
             <p className="text-white/70 text-base sm:text-lg font-medium leading-[28px] max-w-xl">
-              UC Berkeley&apos;s Most Innovative Tech Product Organization
+              UC Berkeley&apos;s ISPMA chapter. Small teams run real client projects with
+              companies like Oracle, Adobe, and Dropbox, and learn product management
+              by doing it, not sitting through case studies.
             </p>
           </div>
 
@@ -113,10 +115,10 @@ export default function BetaHome() {
         <div className="relative z-10 max-w-4xl mx-auto text-left text-zinc-900">
           <p className="text-[20px] font-medium text-[#9d6b18] mb-4">Our Impact</p>
           <h2 className="text-4xl sm:text-5xl font-medium tracking-tighter mb-4">
-            Built by students. Felt by the industry.
+            Built By Students. Felt By The Industry.
           </h2>
           <p className="text-zinc-600 text-base sm:text-lg font-medium max-w-lg mb-16">
-            Our community provides PM mentorship to the broader student population through hosting semesterly summits, coordinating speaker events, and working with the best in our industry.
+            No simulations, no fake case studies. Our students do real product work, with real companies, on real deadlines.
           </p>
 
           <div className="flex items-start gap-16">
@@ -137,7 +139,7 @@ export default function BetaHome() {
       <section style={{ backgroundColor: "#05071c" }} className="pt-20 pb-24">
         <div className="text-center px-4 pt-4 pb-14">
           <h2 className="text-4xl sm:text-5xl font-medium tracking-tighter text-white mb-3">
-            Loved by our community
+            Loved By Our Community
           </h2>
           <p className="text-white/60 text-base sm:text-[20px] font-medium tracking-tight mt-4 mx-auto">
             We work hard. We celebrate harder.
@@ -161,11 +163,11 @@ export default function BetaHome() {
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <p className="text-lg font-medium text-[#9d6b18] tracking-tight mb-2">Recent Work</p>
           <h2 className="text-4xl sm:text-5xl font-medium tracking-tighter text-zinc-900 mb-6">
-            What we&apos;ve been working on
+            What We&apos;ve Been Working On
           </h2>
           <p className="text-zinc-600 text-[17px] sm:text-[20px] font-medium tracking-tight leading-[28px]">
-            Real product work from our client projects. Students shipping features
-            with companies like Oracle, Adobe, and Dropbox.
+            We have worked with clients spanning across industries. Some of our past clients
+            include Oracle, Adobe, Dropbox, and more to come.
           </p>
           <CompanyLogoStack />
         </div>
@@ -179,7 +181,7 @@ export default function BetaHome() {
       <section style={{ backgroundColor: "#05071c" }} className="py-24 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-white text-4xl sm:text-5xl tracking-tighter-title mb-6">
-            Think we&apos;d vibe?
+            Think We&apos;d Vibe?
           </h2>
           <p className="text-white/70 text-base sm:text-lg mb-10 max-w-xl mx-auto">
             Whether you&apos;re a student looking to build real product experience, or a

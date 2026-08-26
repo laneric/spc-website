@@ -17,7 +17,7 @@ type TimelineItem = {
 const timelineItems: TimelineItem[] = [
   {
     label: "Our Culture",
-    title: "Honest feedback, reasonable standards",
+    title: "Honest Feedback, Reasonable Standards",
     byline: "SPC · Berkeley",
     imageSrc: "/photos/spc-old-photos/retreat_fa24.jpg",
     imageAlt: "SPC members together at a retreat",
@@ -29,18 +29,18 @@ const timelineItems: TimelineItem[] = [
     ),
     subPoints: [
       {
-        heading: "Craft without theater",
+        heading: "Craft Without Theater",
         text: "We care about clear writing, clear decisions, and decks that earn their length. Nobody is here to perform being busy.",
       },
       {
-        heading: "Actually for students",
+        heading: "Actually For Students",
         text: "Mentors and leads are trying to help you level up. The point is useful reps and real ownership, not resume filler.",
       },
     ],
   },
   {
     label: "Our Community",
-    title: "Not only the work",
+    title: "Not Only The Work",
     byline: "SPC · Community",
     imageSrc: "/photos/community/BIGLITTLE_REVEAL_1.png",
     imageAlt: "SPC community at a big-little reveal",
@@ -69,18 +69,18 @@ const timelineItems: TimelineItem[] = [
     ),
     subPoints: [
       {
-        heading: "Big-little",
+        heading: "Big-Little",
         text: "New members get paired with someone who’s been around a while, so you’re not guessing who to ask first.",
       },
       {
-        heading: "The rest of college",
+        heading: "The Rest Of College",
         text: "Formals, IMs, random weeknight hangs. Some of the friendships last longer than any single project.",
       },
     ],
   },
   {
     label: "How We Work",
-    title: "Client projects at the center",
+    title: "Client Projects At The Center",
     byline: "SPC · Client projects",
     imageSrc: "/photos/spc-old-photos/formal-group.jpg",
     imageAlt: "SPC formal group photo",
@@ -92,7 +92,7 @@ const timelineItems: TimelineItem[] = [
     ),
     subPoints: [
       {
-        heading: "Junior and consultant tracks",
+        heading: "Junior And Consultant Tracks",
         text: "You start with more support and take on more client-facing responsibility as you’re ready. Nothing magical, just structure.",
       },
       {
@@ -115,11 +115,11 @@ const timelineItems: TimelineItem[] = [
     ),
     subPoints: [
       {
-        heading: "Concrete stories",
+        heading: "Concrete Stories",
         text: "Interviews tend to be about what you shipped, what surprised you, and what you’d try differently next time.",
       },
       {
-        heading: "People who stay in touch",
+        heading: "People Who Stay In Touch",
         text: "Alumni and sponsors come back for coffee or recruiting. The summit trip is one of the things that still feels tangible years later.",
       },
     ],
