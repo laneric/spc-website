@@ -137,13 +137,16 @@ export const PROJECTS: Record<string, Project> = {
     duration: "Spring 2026",
     logoDomain: "spacex.com",
     logoShape: "roundedXl",
-    // TODO: replace with the actual project intro/summary once available.
-    intro: "[TODO] Add a summary of the SpaceX engagement here.",
+    intro:
+      "Supported SpaceX's reseller program through a business operations engagement spanning competitor benchmarking, MVP development, and business evaluations.",
     sections: [
       {
         heading: "Supporting Assets Include",
-        // TODO: replace with real deliverables from the engagement.
-        items: ["[TODO] Add deliverables for this project."],
+        items: [
+          "Competitive benchmarking analysis of the reseller landscape",
+          "MVPs supporting the reseller program",
+          "Business evaluations assessing program viability and opportunities",
+        ],
       },
     ],
   },
@@ -153,13 +156,16 @@ export const PROJECTS: Record<string, Project> = {
     duration: "Spring 2026",
     logoDomain: "getredo.com",
     logoShape: "roundedXl",
-    // TODO: replace with the actual project intro/summary once available.
-    intro: "[TODO] Add a summary of the Redo engagement here.",
+    intro:
+      "Designed and prototyped a referral rewards feature for Redo, exploring how post-purchase customers could become a new acquisition channel for merchants.",
     sections: [
       {
         heading: "Supporting Assets Include",
-        // TODO: replace with real deliverables from the engagement.
-        items: ["[TODO] Add deliverables for this project."],
+        items: [
+          "Interactive prototype covering the merchant setup flow and the customer-facing referral experience",
+          "Marketing website presenting the feature as a launch-ready product, with a clear value proposition and feature breakdown",
+          "Product decisions document connecting merchant needs to key feature choices",
+        ],
       },
     ],
   },
@@ -169,13 +175,16 @@ export const PROJECTS: Record<string, Project> = {
     duration: "Spring 2026",
     logoDomain: "capitalone.com",
     logoShape: "roundedXl",
-    // TODO: replace with the actual project intro/summary once available.
-    intro: "[TODO] Add a summary of the Capital One engagement here.",
+    intro:
+      "Partnered with Capital One on a research and prototyping project studying whether column-level data lineage can be inferred from existing dataset-level lineage and related metadata.",
     sections: [
       {
         heading: "Supporting Assets Include",
-        // TODO: replace with real deliverables from the engagement.
-        items: ["[TODO] Add deliverables for this project."],
+        items: [
+          "Feasibility study exploring methods for inferring column-level data relationships from available metadata",
+          "Working prototype demonstrating the proposed inference approach",
+          "Evaluation and recommendation on whether the approach is worth pursuing further",
+        ],
       },
     ],
   },
