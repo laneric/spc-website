@@ -41,9 +41,9 @@ export function HomeAfterHero() {
               From Learning<br />To Launching
             </h2>
             <p className="text-zinc-600 text-lg leading-relaxed mb-6">
-              At SPC, we take pride in our firm commitment to product management (PM) education. We offer a comprensive PM curriculum and industry exposure to all members regardless of initial experience level.
+              At SPC, we take pride in our firm commitment to product management education. We offer one consultant track open to members at every experience level.
             </p>
-            <Link href="/join-us" className="inline-flex items-center gap-2 rounded-none px-4 py-2 text-sm font-semibold bg-gradient-to-r from-[#bf8d36] to-[#f5c971] text-[#2c1a04] hover:brightness-105 transition-all shadow-sm hover:shadow-md">
+            <Link href="/ispma" className="inline-flex items-center gap-2 rounded-none px-4 py-2 text-sm font-semibold bg-gradient-to-r from-[#bf8d36] to-[#f5c971] text-[#2c1a04] hover:brightness-105 transition-all shadow-sm hover:shadow-md">
               Learn More
             </Link>
           </div>
@@ -67,7 +67,7 @@ export function HomeAfterHero() {
               Partner With<br />Berkeley's Top Product Talent
             </h2>
             <p className="text-white/70 text-lg leading-relaxed mb-6">
-              Partner with SPC for client projects, sponsorship opportunities, or recruitment events. Work with our consultants to leverage our strong student and alumni community.
+              Partner with SPC for client projects, sponsorship opportunities, or recruitment events. Access high-achieving UC Berkeley consultants with our 100% satisfaction guarantee.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-4">
               <Link

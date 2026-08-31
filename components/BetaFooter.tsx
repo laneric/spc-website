@@ -25,15 +25,12 @@ export function BetaFooter() {
       heading: "Services",
       links: [
         { label: "Client Projects", href: `${routePrefix}/services` },
-        { label: "PM Curriculum", href: `${routePrefix}/about` },
       ],
     },
     {
       heading: "Links",
       links: [
-        { label: "About", href: `${routePrefix}/about` },
         { label: "ISPMA", href: `${routePrefix}/ispma` },
-        { label: "Careers", href: `${routePrefix}/community` },
       ],
     },
     {
@@ -122,7 +119,6 @@ export function BetaFooter() {
           <span>© {year} Software Product @ Cal</span>
         </div>
         <div className="flex items-center gap-5">
-          <Link href={`${routePrefix}/about`} className="hover:text-white/70 transition-colors duration-150">Practices</Link>
           <Link href={`${routePrefix}/join-us`} className="hover:text-white/70 transition-colors duration-150">Join us</Link>
         </div>
       </div>

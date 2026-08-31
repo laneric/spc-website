@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 
 type SubPoint = { heading: string; text: string };
@@ -88,7 +89,7 @@ const timelineItems: TimelineItem[] = [
     body: (
       <>
         Most semesters, a small team works on real deliverables for a partner company. The workshops and curriculum
-        are built around the same core skills: figuring out what problem you're actually solving, deciding what to
+        are built around the same core skills: figuring out what problem you&apos;re actually solving, deciding what to
         build, and being able to explain the reasoning behind it.
       </>
     ),
@@ -129,7 +130,17 @@ const timelineItems: TimelineItem[] = [
   },
 ];
 
+// Hidden 2026-08-25 per request — page returns 404. All original content
+// preserved below in AboutPageContent; to bring it back, restore the nav
+// link in components/BetaTopbar.tsx, restore the Footer/hero links to
+// /about in components/BetaFooter.tsx and app/(beta)/page.tsx, and swap
+// the default export below to `return <AboutPageContent />;`.
 export default function BetaAboutPage() {
+  notFound();
+}
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars -- kept for easy restoration, see comment above
+function AboutPageContent() {
   return (
     <div className="min-h-screen text-white pt-24" style={{ backgroundColor: "#05071c" }}>
       <div className="max-w-5xl mx-auto w-full px-4 sm:px-12 lg:px-16 py-16">

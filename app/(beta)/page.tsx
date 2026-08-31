@@ -79,7 +79,7 @@ export default function BetaHome() {
               Coffee Chat Us
             </Link>
             <Link
-              href="/about"
+              href="/ispma"
               className="font-sans inline-flex items-center px-6 py-2.5 rounded-none border border-white/40 text-white text-lg font-medium tracking-tight hover:bg-white/10 transition-all duration-200"
             >
               Learn More
