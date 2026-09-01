@@ -61,15 +61,15 @@ const BRAND_COLORS: Record<string, string> = {
 
 // Order below is a rough "prestige" ranking by general company scale/
 // recognition (my judgment call, not an official metric) — reorder freely.
+// Reduced to 4 on mobile-overflow request (2026-08-31) — a row of 8 fixed-
+// width tiles doesn't wrap and was pushing the page wider than the mobile
+// viewport. Kept SpaceX/Oracle/Adobe + Capital One over Dropbox as a
+// judgment call — swap back to Dropbox if you'd rather have that one.
 const companies = [
   { name: "SpaceX", domain: "spacex.com", slug: "spacex", rotation: -3 },
   { name: "Oracle", domain: "oracle.com", slug: "oracle", rotation: -6 },
   { name: "Adobe", domain: "adobe.com", slug: "adobe", rotation: -4 },
   { name: "Capital One", domain: "capitalone.com", slug: "capital-one", rotation: 4 },
-  { name: "Dropbox", domain: "dropbox.com", slug: "dropbox", rotation: 5 },
-  { name: "Zocdoc", domain: "zocdoc.com", slug: "zocdoc", rotation: 3 },
-  { name: "Sweetgreen", domain: "sweetgreen.com", slug: "sweetgreen", rotation: -5 },
-  { name: "Redo", domain: "getredo.com", slug: "redo", rotation: 6 },
 ];
 
 function HoverableLogoItem({

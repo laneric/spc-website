@@ -57,7 +57,12 @@ export function BetaTopbar() {
     };
   }, [menuOpen]);
 
+  const isHomePage = currentPath === "/";
+
   const navLinks = [
+    // Added 2026-08-31: Home link for easy mobile navigation back, hidden
+    // on Home itself since you're already there.
+    ...(isHomePage ? [] : [{ href: routePrefix || "/", label: "Home" }]),
     { href: `${routePrefix}/ispma`, label: "ISPMA" },
     { href: `${routePrefix}/services`, label: "Services" },
     // About hidden 2026-08-25 per request — page still exists and returns

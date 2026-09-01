@@ -8,7 +8,7 @@ import { HomeAfterHero } from "@/components/HomeAfterHero";
 
 export default function BetaHome() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       {/* Hero section */}
       <section className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden">
         {/* Background photo */}
@@ -201,6 +201,6 @@ export default function BetaHome() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
