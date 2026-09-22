@@ -43,7 +43,7 @@ const timelineItems: TimelineItem[] = [
     label: "Our Community",
     title: "Work Hard, Play Hard",
     byline: "SPC · Community",
-    imageSrc: "/photos/community/BIGLITTLE_REVEAL_1.png",
+    imageSrc: "/photos/community/BIGLITTLE_REVEAL_1.jpg",
     imageAlt: "SPC community at a big-little reveal",
     body: (
       <>

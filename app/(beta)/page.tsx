@@ -18,6 +18,7 @@ export default function BetaHome() {
           fill
           className="object-cover"
           style={{ objectPosition: "center 35%" }}
+          sizes="100vw"
           priority
         />
 

@@ -15,6 +15,13 @@ interface ImageSliderProps {
   interval?: number; // milliseconds between auto-advances
 }
 
+function isNearIndex(i: number, current: number, length: number) {
+  if (length <= 3) return true;
+  const prev = (current - 1 + length) % length;
+  const next = (current + 1) % length;
+  return i === current || i === prev || i === next;
+}
+
 export function ImageSlider({ images, alt, interval = 6000 }: ImageSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -42,13 +49,16 @@ export function ImageSlider({ images, alt, interval = 6000 }: ImageSliderProps) 
       >
         {images.map((src, i) => (
           <div key={src} className="relative w-full h-full shrink-0">
-            <Image
-              src={src}
-              alt={`${alt} ${i + 1}`}
-              fill
-              className="object-cover"
-              unoptimized
-            />
+            {isNearIndex(i, currentIndex, images.length) ? (
+              <Image
+                src={src}
+                alt={`${alt} ${i + 1}`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority={i === 0}
+              />
+            ) : null}
           </div>
         ))}
       </div>

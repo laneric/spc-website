@@ -3,12 +3,12 @@ import { useRef, useEffect } from "react";
 import Image from "next/image";
 
 const photos = [
-  "/photos/community/BANQUET_1.png",
-  "/photos/community/BIGLITTLE_REVEAL_1.png",
-  "/photos/community/GIRLS_BEACH_1.png",
-  "/photos/community/ICE_SKATING_1.png",
-  "/photos/community/olympics.png",
-  "/photos/community/retreat_1.png",
+  "/photos/community/BANQUET_1.jpg",
+  "/photos/community/BIGLITTLE_REVEAL_1.jpg",
+  "/photos/community/GIRLS_BEACH_1.jpg",
+  "/photos/community/ICE_SKATING_1.jpg",
+  "/photos/community/olympics.jpg",
+  "/photos/community/retreat_1.jpg",
   "/photos/spc-old-photos/banquet.jpg",
   "/photos/spc-old-photos/banquet2.jpg",
   "/photos/spc-old-photos/hiking.jpg",

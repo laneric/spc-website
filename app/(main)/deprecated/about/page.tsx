@@ -29,7 +29,7 @@ const timelineItems: TimelineItem[] = [
     label: "Our Community",
     title: "Not only the work",
     byline: "SPC · Community",
-    imageSrc: "/photos/community/BIGLITTLE_REVEAL_1.png",
+    imageSrc: "/photos/community/BIGLITTLE_REVEAL_1.jpg",
     imageAlt: "SPC community at a big-little reveal",
     body: <>Retreats, socials, and low-key hangs are a real part of the club.</>,
   },

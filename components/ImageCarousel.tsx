@@ -35,7 +35,8 @@ export function ImageCarousel({ images, alt, interval = 6000 }: ImageCarouselPro
         alt={alt}
         fill
         className={`object-cover transition-opacity duration-[1400ms] ease-in-out ${fade ? "opacity-100" : "opacity-0"}`}
-        unoptimized
+        sizes="(max-width: 768px) 100vw, 50vw"
+        priority={currentIndex === 0}
       />
     </div>
   );
