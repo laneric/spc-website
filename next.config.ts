@@ -10,6 +10,12 @@ const nextConfig: NextConfig = {
       { source: "/beta/join-us", destination: "/join-us", permanent: true },
       { source: "/beta/services", destination: "/services", permanent: true },
       { source: "/beta/projects/:slug", destination: "/projects/:slug", permanent: true },
+      {
+        source: "/summit-2026",
+        destination:
+          "https://docs.google.com/forms/d/e/1FAIpQLSeB5Z5jBysUzeosmnDmK9LVUHQqyquvd5tudX-G5uKyNR3YKw/viewform",
+        permanent: false,
+      },
     ];
   },
   images: {
