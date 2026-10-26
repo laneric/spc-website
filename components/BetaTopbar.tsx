@@ -19,6 +19,8 @@ export function BetaTopbar() {
   const isJoinUsPage = currentPath === "/join-us";
   const isAboutPage = currentPath === "/about";
   const isCommunityPage = currentPath === "/community";
+  // Added 2026-10-26: Events page
+  const isEventsPage = currentPath === "/events";
 
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -33,6 +35,7 @@ export function BetaTopbar() {
     isJoinUsPage ||
     isAboutPage ||
     isCommunityPage ||
+    isEventsPage || // Added 2026-10-26
     scrolled;
 
   useEffect(() => {
@@ -65,6 +68,8 @@ export function BetaTopbar() {
     ...(isHomePage ? [] : [{ href: routePrefix || "/", label: "Home" }]),
     { href: `${routePrefix}/ispma`, label: "ISPMA" },
     { href: `${routePrefix}/services`, label: "Services" },
+    // Added 2026-10-26: Events, same level as ISPMA and Services
+    { href: `${routePrefix}/events`, label: "Events" },
     // About hidden 2026-08-25 per request — page still exists and returns
     // 404 (see app/(beta)/about/page.tsx), so re-adding this link is
     // enough to bring it back.
