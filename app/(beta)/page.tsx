@@ -66,17 +66,7 @@ export default function BetaHome() {
           {/* Added 2026-08-22: "Learn more" + "Coffee chat us" alongside
               "Join us". Coffee chat us links to the Join Us page's Coffee
               Chats section since there's no standalone booking link yet. */}
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            {/* Added 2026-10-26: main CTA for the Product Sprint event.
-                Remove this link once the event is over. */}
-            <a
-              href="https://partiful.com/e/FTODoRP7ePLsz74DqmsM"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-sans inline-flex items-center px-6 py-2.5 rounded-none bg-gradient-to-r from-[#bf8d36] to-[#f5c971] text-[#2c1a04] text-lg font-semibold tracking-tight hover:brightness-105 transition-all duration-200"
-            >
-              Product Sprint Event TODAY 10/26!!
-            </a>
+          <div className="flex flex-wrap items-center gap-3">
             <Link
               href="/join-us"
               className="font-sans inline-flex items-center px-6 py-2.5 rounded-none bg-gradient-to-r from-[#8a8f98] to-[#e2e5e9] text-black text-lg font-medium tracking-tight hover:brightness-105 transition-all duration-200"
