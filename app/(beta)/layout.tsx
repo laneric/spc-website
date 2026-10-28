@@ -1,7 +1,8 @@
 import { BetaTopbar } from "@/components/BetaTopbar";
 import { BetaFooter } from "@/components/BetaFooter";
-// Added 2026-10-26: announcement bar for the Product Sprint event
-import { AnnouncementBar } from "@/components/AnnouncementBar";
+// Announcement bar removed 2026-10-28 (Product Sprint is over). To reuse it,
+// import AnnouncementBar from "@/components/AnnouncementBar" and render it
+// above <BetaTopbar />, then set top-14 on the topbar wrappers again.
 import { siteMetadata } from "@/lib/site-metadata";
 import { inter, instrumentSerif } from "../fonts";
 import "../globals.css";
@@ -16,7 +17,6 @@ export default function BetaLayout({
   return (
     <html lang="en" className={`h-full ${inter.variable} ${instrumentSerif.variable}`}>
       <body className="antialiased bg-zinc-950 text-white flex flex-col min-h-screen font-sans">
-        <AnnouncementBar />
         <BetaTopbar />
 
         {/* Page content */}

@@ -47,7 +47,8 @@ export default function BetaEvents() {
               "linear-gradient(135deg, rgba(219,169,81,0.14) 0%, rgba(219,169,81,0.04) 55%, transparent 100%)",
           }}
         >
-          <p className="text-[#f5c971] text-lg font-medium tracking-tight mb-3">Upcoming</p>
+          {/* Changed 2026-10-28: event is over, label updated from "Upcoming" */}
+          <p className="text-[#f5c971] text-lg font-medium tracking-tight mb-3">Completed</p>
           <h2 className="text-3xl sm:text-5xl tracking-tighter font-medium text-white mb-6">
             {EVENT.title}
           </h2>
@@ -62,15 +63,11 @@ export default function BetaEvents() {
             {EVENT.blurb}
           </p>
 
-          <a
-            href={EVENT.rsvpUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-2.5 rounded-none bg-gradient-to-r from-[#bf8d36] to-[#f5c971] text-[#2c1a04] text-lg font-semibold tracking-tight hover:brightness-105 transition-all duration-200"
-          >
-            RSVP on Partiful
-          </a>
-          <p className="text-white/50 text-sm mt-3">{EVENT.checkIn}</p>
+          {/* Changed 2026-10-28: RSVP button replaced with a completed note.
+              EVENT.rsvpUrl and EVENT.checkIn are kept above for reference. */}
+          <p className="inline-flex items-center px-6 py-2.5 rounded-none border border-[#dba951]/40 text-[#f5c971] text-lg font-semibold tracking-tight">
+            This event has ended
+          </p>
         </section>
 
         {/* Agenda + Speakers */}

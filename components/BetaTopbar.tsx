@@ -82,8 +82,8 @@ export function BetaTopbar() {
     <>
       {/* Desktop / tablet topbar */}
       <motion.div
-        // Changed 2026-10-26: top-5 -> top-14 to sit below the announcement bar
-        className="fixed top-14 left-1/2 -translate-x-1/2 z-50 hidden sm:block"
+        // Reverted 2026-10-28: top-14 -> top-5 now that the announcement bar is gone
+        className="fixed top-5 left-1/2 -translate-x-1/2 z-50 hidden sm:block"
         initial={{ opacity: 0, y: -10 }}
         animate={mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
@@ -214,8 +214,8 @@ export function BetaTopbar() {
 
       {/* Mobile top-right trigger */}
       <motion.div
-        // Changed 2026-10-26: top-5 -> top-14 to sit below the announcement bar
-        className="fixed top-14 right-5 z-50 sm:hidden"
+        // Reverted 2026-10-28: top-14 -> top-5 now that the announcement bar is gone
+        className="fixed top-5 right-5 z-50 sm:hidden"
         initial={{ opacity: 0, y: -8 }}
         animate={mounted ? { opacity: 1, y: 0 } : { opacity: 0, y: -8 }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
